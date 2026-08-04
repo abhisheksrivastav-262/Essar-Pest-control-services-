@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/pest-library/cockroaches" className="hover:text-brand-green-400 transition-colors">
+                <Link href="/pest-library/german-cockroach" className="hover:text-brand-green-400 transition-colors">
                   Herbal Kitchen Cockroach Gel Treatment
                 </Link>
               </li>
@@ -95,11 +95,6 @@ export const Footer: React.FC = () => {
               <li>
                 <Link href="/locations" className="hover:text-brand-amber-400 transition-colors">
                   Gurgaon & Delhi NCR Service Areas
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-brand-amber-400 transition-colors">
-                  Pest Prevention Blog & Guides
                 </Link>
               </li>
               <li>

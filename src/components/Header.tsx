@@ -12,7 +12,6 @@ export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   useEffect(() => {
@@ -112,18 +111,6 @@ export const Header: React.FC = () => {
               }`}
             >
               Locations
-            </Link>
-
-            {/* Blog */}
-            <Link
-              href="/blog"
-              className={`px-3 py-2 rounded-lg transition-colors ${
-                isActive('/blog')
-                  ? 'text-brand-green-500 bg-brand-green-50 font-bold'
-                  : 'hover:text-brand-green-500 hover:bg-slate-50'
-              }`}
-            >
-              Blog
             </Link>
 
             {/* About Us */}
@@ -235,14 +222,6 @@ export const Header: React.FC = () => {
               className="block font-bold text-slate-800 py-2 border-b border-slate-100"
             >
               Locations (Gurgaon & NCR)
-            </Link>
-
-            <Link
-              href="/blog"
-              onClick={() => setMobileMenuOpen(false)}
-              className="block font-bold text-slate-800 py-2 border-b border-slate-100"
-            >
-              Pest Blog & Advice
             </Link>
 
             <Link

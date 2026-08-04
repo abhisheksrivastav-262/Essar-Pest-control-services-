@@ -1,8 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 import { PageHero } from '@/components/PageHero';
 import { QuoteForm } from '@/components/QuoteForm';
 import { CTABanner } from '@/components/CTABanner';
-import { Phone, Mail, MapPin, Clock, ExternalLink, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ExternalLink, ShieldCheck } from 'lucide-react';
 
 export const metadata = {
   title: 'Contact Nexora Pest Management Gurgaon | Call 8368334476',
@@ -18,12 +19,14 @@ export default function ContactUsPage() {
         subtitle="Speak with our Gurgaon technical team, request a free site inspection, or visit our central office at Sector 5."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]}
         badge="24/7 Helpline & Support"
+        videoUrl="https://assets.mixkit.co/videos/preview/mixkit-car-driving-down-a-city-street-42513-large.mp4"
+        posterUrl="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
       />
 
       {/* Two-Column Main Contact Layout */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          {/* Left Column: Full Contact Details & Map */}
+          {/* Left Column: Full Contact Details & Supporting Office Photo & Map */}
           <div className="lg:col-span-6 space-y-8">
             <div className="space-y-3">
               <div className="inline-flex items-center gap-2 text-xs font-bold text-brand-green-600 bg-brand-green-50 px-3 py-1 rounded-full">
@@ -35,6 +38,22 @@ export default function ContactUsPage() {
               <p className="text-slate-600 text-sm leading-relaxed">
                 Whether you need emergency termite control, routine cockroach gel servicing, or commercial FSSAI audit support, our helpline is active 24/7.
               </p>
+            </div>
+
+            {/* Supporting Office / Service Fleet Visual Card */}
+            <div className="relative h-48 w-full rounded-2xl overflow-hidden shadow-md border-2 border-white">
+              <Image
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
+                alt="Nexora Sector 5 Gurgaon Dispatch Fleet"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/90 via-transparent to-transparent flex items-end p-4">
+                <div>
+                  <div className="font-extrabold text-white text-sm">Sheetla Colony Operational Facility</div>
+                  <div className="text-[11px] text-slate-300">Dispatch hub for all Gurgaon sectors & NCR</div>
+                </div>
+              </div>
             </div>
 
             {/* Direct Contact Cards */}

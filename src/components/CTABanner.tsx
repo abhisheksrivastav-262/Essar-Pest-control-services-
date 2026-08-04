@@ -1,25 +1,38 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Tag, ArrowRight } from 'lucide-react';
 
 interface CTABannerProps {
   title?: string;
   subtitle?: string;
   badge?: string;
+  bgImageUrl?: string;
 }
 
 export const CTABanner: React.FC<CTABannerProps> = ({
   title = 'Special Monsoon Offer: 30% Off Home Pest Shield',
   subtitle = 'Book your hassle-free inspection today. 100% money-back guarantee & zero toxic fumes.',
   badge = 'Limited-Time Gurgaon Discount',
+  bgImageUrl = 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1200&q=80',
 }) => {
   return (
-    <div className="bg-gradient-to-r from-brand-green-600 via-brand-green-500 to-emerald-700 text-white rounded-3xl p-8 md:p-12 shadow-xl my-12 relative overflow-hidden">
-      {/* Background Decorative Circles */}
-      <div className="absolute -top-12 -right-12 w-64 h-64 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-      <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-brand-amber-500/20 rounded-full blur-2xl pointer-events-none" />
+    <div className="relative text-white rounded-3xl p-8 md:p-12 shadow-2xl my-12 overflow-hidden border border-brand-green-500/30">
+      {/* Supporting Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={bgImageUrl}
+          alt="Nexora Pest Control Service"
+          fill
+          className="object-cover object-center"
+        />
+      </div>
 
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+      {/* Dark Green Gradient Overlay */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-brand-slate/95 via-brand-green-950/90 to-brand-green-900/90 backdrop-blur-[2px]" />
+
+      {/* Content */}
+      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between gap-8">
         <div className="space-y-3 text-center lg:text-left">
           <div className="inline-flex items-center gap-1.5 bg-brand-amber-500 text-white text-xs font-black uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
             <Tag className="w-3.5 h-3.5" />

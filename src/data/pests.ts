@@ -64,47 +64,6 @@ export const pestsData: Pest[] = [
     ]
   },
   {
-    slug: 'cockroaches',
-    name: 'Cockroaches (German & American)',
-    scientificName: 'Blattodea (German & American Cockroaches)',
-    category: 'Crawling',
-    tagline: 'Odorless Kitchen & Drainage Roach Eradication',
-    shortHook: 'Rapidly multiplying pests carrying salmonella and contaminating food pantries.',
-    primarySeason: 'Year-Round (Peak Spring & Summer)',
-    dangerLevel: 'High',
-    imageUrl: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80',
-    description: 'Cockroaches are among the most frequent kitchen and drainage pests in Gurgaon apartments and restaurant pantries. They hide inside cabinet hinges, appliance motors, and drainage pipelines.',
-    appearance: 'Tan to dark reddish-brown body (12-40 mm) with oval flattened shape.',
-    behavior: 'Nocturnal scavengers that nest close to moisture and food sources in warm indoor environments.',
-    whyItsAProblem: [
-      'Contaminates open food and preparation surfaces with pathogenic bacteria.',
-      'Triggers severe allergic reactions and asthmatic attacks in young children.',
-      'Emits unpleasant musty odors and stains wall crevices.'
-    ],
-    signsOfInfestation: [
-      'Visible small or large roaches scurrying when lights are turned on.',
-      'Fine pepper-like black droppings inside cabinet drawers or along drainage shafts.',
-      'Egg capsules (oothecae) hidden in furniture corners.'
-    ],
-    treatmentProcess: [
-      {
-        step: 1,
-        title: 'Herbal Gel Matrix Baiting',
-        description: 'Target dots of non-repellent cascading gel applied inside cabinet hinges and appliance motors.'
-      },
-      {
-        step: 2,
-        title: 'Micro-Emulsion Crevice Spray',
-        description: 'Treating floor drain junctions and pipe voids with eco-friendly odorless synthetic pyrethroids.'
-      },
-      {
-        step: 3,
-        title: 'Sanitation Audit',
-        description: 'Deploying sticky monitoring traps and providing client guidance on sealing entry cracks.'
-      }
-    ]
-  },
-  {
     slug: 'german-cockroach',
     name: 'German Cockroach',
     scientificName: 'Blattella germanica',
@@ -142,46 +101,6 @@ export const pestsData: Pest[] = [
         step: 3,
         title: 'Sanitation Audit',
         description: 'Deploying sticky monitoring traps and providing client guidance on sealing entry cracks.'
-      }
-    ]
-  },
-  {
-    slug: 'american-cockroach',
-    name: 'American Cockroach',
-    scientificName: 'Periplaneta americana',
-    category: 'Crawling',
-    tagline: 'Sewer & Drainage Roach Flushing Protocol',
-    shortHook: 'Large reddish-brown sewer roaches invading bathrooms and commercial drain shafts.',
-    primarySeason: 'Summer & Monsoon',
-    dangerLevel: 'High',
-    imageUrl: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=800&q=80',
-    description: 'American cockroaches thrive in Gurgaon drainage pipelines, sewage manholes, and dark basements. They fly into apartment windows during humid summer nights.',
-    appearance: 'Large reddish-brown body (35-40 mm) with a yellowish band behind the head shield and fully developed wings.',
-    behavior: 'Prefers dark, damp areas like sewer gullies, boiler rooms, and basement storage voids.',
-    whyItsAProblem: [
-      'Vectors for E. coli, Dysentery, and Cholera pathogens from sewers.',
-      'Capable of short-distance flight into balcony doors and windows.',
-      'Creates high distress due to large physical size.'
-    ],
-    signsOfInfestation: [
-      'Large roaches emerging from floor traps or balcony drains at night.',
-      'Cylindrical droppings with ridged sides around drainage pipes.'
-    ],
-    treatmentProcess: [
-      {
-        step: 1,
-        title: 'Drainage Trench Flushing',
-        description: 'Injecting residual micro-emulsion sprays into main drainage traps and shaft gullies.'
-      },
-      {
-        step: 2,
-        title: 'Perimeter Barrier Treatment',
-        description: 'Applying long-lasting residual barrier along outdoor building foundations.'
-      },
-      {
-        step: 3,
-        title: 'Drain Mesh Guidance',
-        description: 'Recommending stainless steel drain covers and sealing wall pipe entry gaps.'
       }
     ]
   },
@@ -264,6 +183,46 @@ export const pestsData: Pest[] = [
         step: 3,
         title: 'Sanitization & Removal Protocol',
         description: 'Safe collection of captured rodents, odor neutralization, and bio-hygiene sanitization.'
+      }
+    ]
+  },
+  {
+    slug: 'american-cockroach',
+    name: 'American Cockroach',
+    scientificName: 'Periplaneta americana',
+    category: 'Crawling',
+    tagline: 'Sewer & Drainage Roach Flushing Protocol',
+    shortHook: 'Large reddish-brown sewer roaches invading bathrooms and commercial drain shafts.',
+    primarySeason: 'Summer & Monsoon',
+    dangerLevel: 'High',
+    imageUrl: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=800&q=80',
+    description: 'American cockroaches thrive in Gurgaon drainage pipelines, sewage manholes, and dark basements. They fly into apartment windows during humid summer nights.',
+    appearance: 'Large reddish-brown body (35-40 mm) with a yellowish band behind the head shield and fully developed wings.',
+    behavior: 'Prefers dark, damp areas like sewer gullies, boiler rooms, and basement storage voids.',
+    whyItsAProblem: [
+      'Vectors for E. coli, Dysentery, and Cholera pathogens from sewers.',
+      'Capable of short-distance flight into balcony doors and windows.',
+      'Creates high distress due to large physical size.'
+    ],
+    signsOfInfestation: [
+      'Large roaches emerging from floor traps or balcony drains at night.',
+      'Cylindrical droppings with ridged sides around drainage pipes.'
+    ],
+    treatmentProcess: [
+      {
+        step: 1,
+        title: 'Drainage Trench Flushing',
+        description: 'Injecting residual micro-emulsion sprays into main drainage traps and shaft gullies.'
+      },
+      {
+        step: 2,
+        title: 'Perimeter Barrier Treatment',
+        description: 'Applying long-lasting residual barrier along outdoor building foundations.'
+      },
+      {
+        step: 3,
+        title: 'Drain Mesh Guidance',
+        description: 'Recommending stainless steel drain covers and sealing wall pipe entry gaps.'
       }
     ]
   },
@@ -545,128 +504,6 @@ export const pestsData: Pest[] = [
         step: 3,
         title: 'Veterinary Coordination Guidance',
         description: 'Aligning home treatment timing with veterinary anti-tick oral/topical spot-on application.'
-      }
-    ]
-  },
-  {
-    slug: 'fleas',
-    name: 'Fleas',
-    scientificName: 'Ctenocephalides felis',
-    category: 'Crawling',
-    tagline: 'Eliminate Biting Parasites from Rugs & Furniture',
-    shortHook: 'Tiny wingless jumpers causing non-stop itching and red ankle bites.',
-    primarySeason: 'Summer & Monsoon',
-    dangerLevel: 'Moderate',
-    imageUrl: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80',
-    description: 'Fleas jump up to 50 times their body length, infesting rug piles, pet beds, and soft furnishings rapidly.',
-    appearance: 'Tiny (1-3 mm), dark reddish-brown, laterally flattened bodies with powerful back legs built for jumping.',
-    behavior: 'Feeds exclusively on mammal blood. Larvae feed on organic debris inside carpet fibers.',
-    whyItsAProblem: [
-      'Bites humans around lower legs, leaving itchy red clusters.',
-      'Transmits tapeworms to household pets.',
-      'Eggs drop off pets onto furniture, creating continuous re-infestation cycles.'
-    ],
-    signsOfInfestation: [
-      'Pets constantly scratching, biting their backs, or licking fur.',
-      'Flea dirt (black specks that turn red when wet) on white pet sheets.',
-      'Bites on human ankles and lower legs.'
-    ],
-    treatmentProcess: [
-      {
-        step: 1,
-        title: 'Carpet & Upholstery IGR Treatment',
-        description: 'Spraying Insect Growth Regulators (IGR) to stop flea larvae from pupating.'
-      },
-      {
-        step: 2,
-        title: 'Adulticide Mist Spray',
-        description: 'Knocking down adult jumping fleas across all flooring and furniture bases.'
-      },
-      {
-        step: 3,
-        title: 'Vacuuming Protocol Guidance',
-        description: 'Instructing deep vacuuming schedule to trigger flea cocoon emergence into treated surfaces.'
-      }
-    ]
-  },
-  {
-    slug: 'silverfish',
-    name: 'Silverfish',
-    scientificName: 'Lepisma saccharinum',
-    category: 'Crawling',
-    tagline: 'Preserve Your Library, Documents & Wardrobe Textiles',
-    shortHook: 'Fast-moving wingless insects eating books, wallpaper glue, and cotton garments in humid areas.',
-    primarySeason: 'Year-Round (Thrives in Damp Bathrooms & Bookcases)',
-    dangerLevel: 'Low',
-    imageUrl: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
-    description: 'Silverfish require high humidity (75%+) and devour carbohydrates, starches, paper, and clothing.',
-    appearance: 'Shiny silver/gray teardrop-bodied insects (12-19 mm) with fish-like wriggling movements and three tail bristles.',
-    behavior: 'Nocturnal and extremely fast runners that hide under bathroom sinks, behind wall coverings, and inside book stacks.',
-    whyItsAProblem: [
-      'Destroys valuable paper records, vintage books, and framed artwork.',
-      'Chews irregular holes in silk, cotton, and linen clothes stored in wardrobes.',
-      'Sheds skin causing mild indoor dust allergies.'
-    ],
-    signsOfInfestation: [
-      'Small irregular yellow-stained holes in books, cardboard, or clothes.',
-      'Tiny black pepper-like droppings inside bathroom cabinets or storage boxes.',
-      'Wriggling silvery insects seen when opening dark cupboards.'
-    ],
-    treatmentProcess: [
-      {
-        step: 1,
-        title: 'Humidity & Crevice Assessment',
-        description: 'Identifying damp spots and plumbing leaks driving silverfish activity.'
-      },
-      {
-        step: 2,
-        title: 'Micro-Mist Dust Injection',
-        description: 'Injecting odorless desiccant dust into wall voids, book shelves, and false ceiling gaps.'
-      },
-      {
-        step: 3,
-        title: 'Long-Term Preventive Moisture Control',
-        description: 'Recommendations for dehumidification and sealing tile grout lines.'
-      }
-    ]
-  },
-  {
-    slug: 'beetles',
-    name: 'Wood-Boring Beetles',
-    scientificName: 'Anobiidae & Lyctidae (Powderpost Beetles)',
-    category: 'Insects',
-    tagline: 'Stop Wood Flour Dust & Protect Plywood Assets',
-    shortHook: 'Wood-destroying beetles whose larvae bore tunnels inside furniture and plywood paneling.',
-    primarySeason: 'Spring & Early Summer',
-    dangerLevel: 'High',
-    imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
-    description: 'Powderpost beetles lay eggs in porous wood grain. Their larvae spend years tunneling inside plywood wardrobes, structural beams, and wooden artifacts.',
-    appearance: 'Small dark reddish-brown beetles (2-7 mm). Larvae are cream-colored C-shaped grubs.',
-    behavior: 'Larvae spend months feeding inside wooden furniture, pushing fine flour powder out of exit holes when emerging as adults.',
-    whyItsAProblem: [
-      'Severely weakens structural plywood, bed slats, and antique wooden tables.',
-      'Leaves fine yellow wood dust ("wood flour") constantly falling on floors.',
-      'Infests newly purchased non-treated timber furniture rapidly.'
-    ],
-    signsOfInfestation: [
-      'Tiny circular pinholes (1-2 mm) on wooden furniture surfaces.',
-      'Small mounds of fine yellowish wood flour powder accumulated below holes.'
-    ],
-    treatmentProcess: [
-      {
-        step: 1,
-        title: 'Syringe Injection & Oil-Based Treatment',
-        description: 'Injecting specialized chemical wood preservatives directly into exit holes using pressurized needles.'
-      },
-      {
-        step: 2,
-        title: 'Surface Solvent Coating',
-        description: 'Brushing or spraying deep-penetrating oil-based termiticide/insecticide over raw wooden surfaces.'
-      },
-      {
-        step: 3,
-        title: 'Sealing & Varnish Protection',
-        description: 'Guidance on top-coat sealing to block new adult beetles from depositing eggs.'
       }
     ]
   }

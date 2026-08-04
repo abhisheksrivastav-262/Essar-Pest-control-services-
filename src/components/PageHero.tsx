@@ -1,15 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import { HeroVideo } from './HeroVideo';
 
 interface PageHeroProps {
   title: string;
   subtitle: string;
   badge?: string;
   breadcrumbs?: { label: string; href?: string }[];
-  videoUrl?: string;
-  posterUrl?: string;
 }
 
 export const PageHero: React.FC<PageHeroProps> = ({
@@ -17,16 +14,13 @@ export const PageHero: React.FC<PageHeroProps> = ({
   subtitle,
   badge = 'Nexora Pest Management Gurgaon',
   breadcrumbs = [{ label: 'Home', href: '/' }],
-  videoUrl,
-  posterUrl = 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80',
 }) => {
   return (
-    <HeroVideo
-      videoUrl={videoUrl}
-      posterUrl={posterUrl}
-      className="py-16 md:py-24 px-4 border-b border-slate-800 text-white"
-    >
-      <div className="max-w-7xl mx-auto text-center space-y-4">
+    <div className="relative bg-gradient-to-br from-brand-green-900 via-brand-slate to-slate-950 text-white py-16 md:py-20 px-4 overflow-hidden border-b border-slate-800">
+      {/* Background Decorative Pattern */}
+      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#1F6B3A_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+
+      <div className="relative z-10 max-w-7xl mx-auto text-center space-y-4">
         {/* Breadcrumbs */}
         <nav className="flex justify-center items-center space-x-2 text-xs text-brand-green-300 font-medium mb-2">
           {breadcrumbs.map((crumb, idx) => (
@@ -44,19 +38,19 @@ export const PageHero: React.FC<PageHeroProps> = ({
         </nav>
 
         {badge && (
-          <div className="inline-block bg-brand-green-500/30 backdrop-blur-md text-brand-green-200 border border-brand-green-400/40 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-sm">
+          <div className="inline-block bg-brand-green-500/20 text-brand-green-300 border border-brand-green-500/40 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full">
             {badge}
           </div>
         )}
 
-        <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight max-w-4xl mx-auto drop-shadow-md">
+        <h1 className="text-3xl md:text-5xl font-black tracking-tight leading-tight max-w-4xl mx-auto">
           {title}
         </h1>
 
-        <p className="text-base md:text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed font-normal drop-shadow">
+        <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
           {subtitle}
         </p>
       </div>
-    </HeroVideo>
+    </div>
   );
 };

@@ -164,7 +164,7 @@ export const Footer: React.FC = () => {
             ©️ 2026 Nexora Pest Management Pvt Ltd. All Rights Reserved.
           </div>
           <div className="flex items-center space-x-6">
-            <span className="text-slate-400 font-medium">Registered Office: Gurgaon, Haryana, India</span>
+            <span className="text-slate-400 font-medium">Registered Office: Gurgaon, Haryana, India (CIN: U46692HR2026PTC147850)</span>
             <span>|</span>
             <Link href="/contact-us" className="hover:text-slate-300 transition-colors">
               Privacy Policy & Terms

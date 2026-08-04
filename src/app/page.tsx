@@ -17,7 +17,7 @@ import { QuoteForm } from '@/components/QuoteForm';
 import { PestCard } from '@/components/PestCard';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 import { CTABanner } from '@/components/CTABanner';
-import { HeroAnimatedBg } from '@/components/HeroAnimatedBg';
+import { HeroVideo } from '@/components/HeroVideo';
 import { pestsData } from '@/data/pests';
 
 export default function HomePage() {
@@ -27,12 +27,13 @@ export default function HomePage() {
 
   return (
     <div className="space-y-16 md:space-y-24 pb-12">
-      {/* 1. HERO SECTION WITH ANIMATED PEST-CONTROL BACKGROUND */}
-      <section className="relative bg-gradient-to-br from-brand-green-950 via-brand-slate to-slate-950 text-white py-12 md:py-20 overflow-hidden border-b border-slate-800">
-        {/* Subtle Animated Background Elements */}
-        <HeroAnimatedBg />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. HERO SECTION WITH BUSINESS VIDEO BACKGROUND & HIGH CONTRAST OVERLAY */}
+      <HeroVideo
+        videoUrl="https://assets.mixkit.co/videos/preview/mixkit-disinfecting-a-room-with-a-spray-machine-42407-large.mp4"
+        posterUrl="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80"
+        className="py-12 md:py-20 text-white border-b border-slate-800"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
@@ -91,7 +92,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </HeroVideo>
 
       {/* 2. WHY CHOOSE US (6-Icon Feature Grid + Supporting Stock Photo Layout) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

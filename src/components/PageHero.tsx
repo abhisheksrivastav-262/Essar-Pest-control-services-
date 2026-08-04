@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import { HeroAnimatedBg } from './HeroAnimatedBg';
+import { HeroVideo } from './HeroVideo';
 
 interface PageHeroProps {
   title: string;
   subtitle: string;
   badge?: string;
   breadcrumbs?: { label: string; href?: string }[];
+  videoUrl?: string;
+  posterUrl?: string;
 }
 
 export const PageHero: React.FC<PageHeroProps> = ({
@@ -15,13 +17,16 @@ export const PageHero: React.FC<PageHeroProps> = ({
   subtitle,
   badge = 'Nexora Pest Management Gurgaon',
   breadcrumbs = [{ label: 'Home', href: '/' }],
+  videoUrl,
+  posterUrl = 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80',
 }) => {
   return (
-    <div className="relative bg-gradient-to-br from-brand-green-950 via-brand-slate to-slate-950 text-white py-16 md:py-24 px-4 overflow-hidden border-b border-slate-800">
-      {/* Subtle Pest Control Animated Background */}
-      <HeroAnimatedBg />
-
-      <div className="relative z-10 max-w-7xl mx-auto text-center space-y-4">
+    <HeroVideo
+      videoUrl={videoUrl}
+      posterUrl={posterUrl}
+      className="py-16 md:py-24 px-4 border-b border-slate-800 text-white"
+    >
+      <div className="max-w-7xl mx-auto text-center space-y-4">
         {/* Breadcrumbs */}
         <nav className="flex justify-center items-center space-x-2 text-xs text-brand-green-300 font-medium mb-2">
           {breadcrumbs.map((crumb, idx) => (
@@ -52,6 +57,6 @@ export const PageHero: React.FC<PageHeroProps> = ({
           {subtitle}
         </p>
       </div>
-    </div>
+    </HeroVideo>
   );
 };

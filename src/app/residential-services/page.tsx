@@ -87,6 +87,8 @@ export default function ResidentialServicesPage() {
         title="Residential Pest Control Services in Gurgaon"
         subtitle="Safe, odorless, and eco-friendly home protection plans designed for apartments, villas, and residential societies."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Residential Services' }]}
+        videoUrl="https://assets.mixkit.co/videos/preview/mixkit-worker-disinfecting-a-house-with-a-spray-gun-42409-large.mp4"
+        posterUrl="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1200&q=80"
       />
 
       {/* Overview Section with Supporting Kitchen Gel Photo */}

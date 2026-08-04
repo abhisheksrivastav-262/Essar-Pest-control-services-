@@ -11,42 +11,41 @@ import {
   Sparkles,
   CheckCircle2,
   ArrowRight,
-  Headphones,
   Check,
 } from 'lucide-react';
 import { QuoteForm } from '@/components/QuoteForm';
 import { PestCard } from '@/components/PestCard';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
 import { CTABanner } from '@/components/CTABanner';
+import { HeroAnimatedBg } from '@/components/HeroAnimatedBg';
 import { pestsData } from '@/data/pests';
 
 export default function HomePage() {
-  // Select top 4 common pests for homepage grid
   const commonPests = pestsData.filter((p) =>
-    ['termites', 'cockroaches', 'bed-bugs', 'rodents'].includes(p.slug)
+    ['termites', 'german-cockroach', 'bed-bugs', 'rodents'].includes(p.slug)
   );
 
   return (
     <div className="space-y-16 md:space-y-24 pb-12">
-      {/* 1. HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-brand-slate via-slate-900 to-brand-green-950 text-white overflow-hidden py-12 md:py-20">
-        {/* Decorative Grid Lines */}
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#1F6B3A_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+      {/* 1. HERO SECTION WITH ANIMATED PEST-CONTROL BACKGROUND */}
+      <section className="relative bg-gradient-to-br from-brand-green-950 via-brand-slate to-slate-950 text-white py-12 md:py-20 overflow-hidden border-b border-slate-800">
+        {/* Subtle Animated Background Elements */}
+        <HeroAnimatedBg />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-brand-green-500/20 text-brand-green-300 border border-brand-green-500/30 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 bg-brand-green-500/30 text-brand-green-200 border border-brand-green-400/40 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">
                 <Sparkles className="w-4 h-4 text-brand-amber-400" />
                 Gurgaon #1 ISO Certified Pest Management
               </div>
 
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight drop-shadow-md">
                 Live <span className="text-brand-amber-400">Pest-Free</span> with Nexora Management
               </h1>
 
-              <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+              <p className="text-base md:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed drop-shadow">
                 Government-licensed, odorless, and eco-friendly pest protection for Gurgaon homes and businesses. 100% money-back guarantee with same-day emergency dispatch.
               </p>
 
@@ -62,7 +61,7 @@ export default function HomePage() {
 
                 <Link
                   href="/residential-services"
-                  className="w-full sm:w-auto bg-slate-800/80 hover:bg-slate-800 text-white border border-slate-700 font-bold text-base py-4 px-8 rounded-2xl transition-all flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-900 text-white border border-slate-700 font-bold text-base py-4 px-8 rounded-2xl transition-all flex items-center justify-center gap-2 backdrop-blur-md"
                 >
                   <span>Explore Plans</span>
                   <ArrowRight className="w-4 h-4" />
@@ -70,7 +69,7 @@ export default function HomePage() {
               </div>
 
               {/* Quick Trust Badges */}
-              <div className="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800 text-slate-300 text-xs font-semibold">
+              <div className="pt-6 grid grid-cols-3 gap-4 border-t border-slate-700/80 text-slate-200 text-xs font-semibold">
                 <div className="flex flex-col items-center lg:items-start">
                   <span className="text-brand-amber-400 font-black text-base">₹999</span>
                   <span>Plans Start At</span>
@@ -94,7 +93,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. WHY CHOOSE US (6-Icon Feature Grid) */}
+      {/* 2. WHY CHOOSE US (6-Icon Feature Grid + Supporting Stock Photo Layout) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
           <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest bg-brand-green-50 px-3 py-1 rounded-full inline-block">
@@ -108,76 +107,89 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Item 1 */}
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center">
-              <Clock className="w-6 h-6" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* 6 Feature Grid */}
+          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center">
+                <Clock className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-brand-slate">24/7 Emergency Service</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Pest emergencies don&apos;t wait for office hours. Call 8368334476 anytime for rapid same-day technician dispatch across Gurgaon.
+              </p>
             </div>
-            <h3 className="text-lg font-bold text-brand-slate">24/7 Emergency Service</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Pest emergencies don&apos;t wait for office hours. Call 8368334476 anytime for rapid same-day technician dispatch across Gurgaon.
-            </p>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-brand-amber-50 text-brand-amber-500 flex items-center justify-center">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-brand-slate">100% Satisfaction Guarantee</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                If pests reappear between scheduled service visits, we return and re-treat your premises completely free of charge.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center">
+                <UserCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-brand-slate">Background-Checked Staff</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Every Nexora field technician undergoes thorough police verification, background checks, and health screenings.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-brand-amber-50 text-brand-amber-500 flex items-center justify-center">
+                <Award className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-brand-slate">Certified & Licensed Technicians</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Trained under PCAI guidelines with expertise in chemical safety and precision application.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center">
+                <RotateCcw className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-brand-slate">Free Return Visits Between Services</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Our warranty plans include unlimited complimentary spot touch-ups if you spot any lingering activity.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-3">
+              <div className="w-12 h-12 rounded-xl bg-brand-amber-50 text-brand-amber-500 flex items-center justify-center">
+                <Sparkles className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-brand-slate">EPA-Approved / Kid & Pet Safe</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                We exclusively use odorless Bayer & Syngenta formulations that are non-toxic to children and pets.
+              </p>
+            </div>
           </div>
 
-          {/* Item 2 */}
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-brand-amber-50 text-brand-amber-500 flex items-center justify-center">
-              <ShieldCheck className="w-6 h-6" />
+          {/* Supporting Photo Column */}
+          <div className="lg:col-span-4 h-full min-h-[380px] relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
+            <Image
+              src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80"
+              alt="Nexora Certified Pest Technician in Protective Gear"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/90 via-transparent to-transparent flex items-end p-6">
+              <div className="text-white">
+                <div className="font-extrabold text-base">Verified Field Specialist</div>
+                <div className="text-xs text-slate-300">Equipped with EPA-approved odorless gel formulations</div>
+              </div>
             </div>
-            <h3 className="text-lg font-bold text-brand-slate">100% Satisfaction Guarantee</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              If pests reappear between scheduled service visits, we return and re-treat your premises completely free of charge.
-            </p>
-          </div>
-
-          {/* Item 3 */}
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center">
-              <UserCheck className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-brand-slate">Background-Checked Staff</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Every Nexora field technician undergoes thorough police verification, background checks, and health screenings for home safety.
-            </p>
-          </div>
-
-          {/* Item 4 */}
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-brand-amber-50 text-brand-amber-500 flex items-center justify-center">
-              <Award className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-brand-slate">Certified & Licensed Technicians</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Trained under PCAI (Pest Control Association of India) guidelines with expertise in chemical safety and precision application.
-            </p>
-          </div>
-
-          {/* Item 5 */}
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center">
-              <RotateCcw className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-brand-slate">Free Return Visits Between Services</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Our warranty plans include unlimited complimentary spot touch-ups if you spot any lingering activity within warranty periods.
-            </p>
-          </div>
-
-          {/* Item 6 */}
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all space-y-4">
-            <div className="w-12 h-12 rounded-xl bg-brand-amber-50 text-brand-amber-500 flex items-center justify-center">
-              <Sparkles className="w-6 h-6" />
-            </div>
-            <h3 className="text-lg font-bold text-brand-slate">EPA-Approved / Kid & Pet Safe</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              We exclusively use odorless Bayer & Syngenta formulations that are non-toxic to children, elderly family members, and pets.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* 3. WHAT TO EXPECT & SECONDARY CTA */}
+      {/* 3. WHAT TO EXPECT */}
       <section className="bg-brand-green-50/70 border-y border-brand-green-100 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -241,7 +253,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Illustration / Image Card */}
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[380px]">
                 <Image
@@ -262,7 +273,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. COMMON PEST PROBLEMS (4-Card Grid from Pest Library) */}
+      {/* 4. COMMON PEST PROBLEMS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
@@ -277,7 +288,7 @@ export default function HomePage() {
             href="/pest-library"
             className="inline-flex items-center gap-2 text-sm font-bold text-brand-green-500 hover:text-brand-amber-500 transition-colors"
           >
-            <span>View All 12+ Pests in Library</span>
+            <span>View All 15+ Pests in Library</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

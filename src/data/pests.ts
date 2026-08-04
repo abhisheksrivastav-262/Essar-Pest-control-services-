@@ -23,7 +23,7 @@ export interface Pest {
 export const pestsData: Pest[] = [
   {
     slug: 'termites',
-    name: 'Termites',
+    name: 'Subterranean Termites (Deemak)',
     scientificName: 'Isoptera (Subterranean & Drywood)',
     category: 'Insects',
     tagline: 'Protect Your Wooden Structure from Silent Destruction',
@@ -64,43 +64,83 @@ export const pestsData: Pest[] = [
     ]
   },
   {
-    slug: 'cockroaches',
-    name: 'Cockroaches',
-    scientificName: 'Blattella germanica & Periplaneta americana',
+    slug: 'german-cockroach',
+    name: 'German Cockroach',
+    scientificName: 'Blattella germanica',
     category: 'Crawling',
-    tagline: 'Hygiene-First Eradication for Kitchens & Bathrooms',
-    shortHook: 'Rapidly multiplying vectors carrying salmonella, E. coli, and triggering indoor asthma.',
+    tagline: 'Odorless Kitchen & Pantry Roach Eradication',
+    shortHook: 'Small, rapidly multiplying kitchen pests carrying salmonella and contaminating food pantries.',
     primarySeason: 'Year-Round (Peak Spring & Summer)',
     dangerLevel: 'High',
     imageUrl: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80',
-    description: 'German and American cockroaches thrive in dark, warm, and moist environments typical of Gurgaon residential kitchens, restaurant pantries, and commercial drainage networks.',
-    appearance: 'Oval, flattened bodies ranging from 12 mm (German) to 40 mm (American), light brown to dark reddish mahogany.',
-    behavior: 'Nocturnal scavengers that feed on food scraps, grease, cardboard glue, and sewage matter. A single female can produce up to 400 offspring annually.',
+    description: 'German cockroaches are the most frequent kitchen pest in Gurgaon apartments and restaurant pantries. They hide inside cabinet hinges, microwave motors, and under sink plumbing.',
+    appearance: 'Tan to light brown body, 12-15 mm long, with two parallel dark stripes running along the head shield.',
+    behavior: 'Nocturnal scavengers that nest close to moisture and food sources in warm indoor environments.',
     whyItsAProblem: [
       'Contaminates open food and preparation surfaces with pathogenic bacteria.',
       'Triggers severe allergic reactions and asthmatic attacks in young children.',
       'Emits unpleasant musty odors and stains wall crevices.'
     ],
     signsOfInfestation: [
-      'Visible roaches scurrying when lights are switched on at night.',
-      'Small pepper-like droppings in cabinet corners and kitchen drawers.',
-      'Oothecae (egg capsules) attached under sinks or behind refrigerators.'
+      'Visible small roaches scurrying when kitchen lights are turned on.',
+      'Fine pepper-like black droppings inside cabinet drawers.',
+      'Egg capsules (oothecae) hidden in furniture corners.'
     ],
     treatmentProcess: [
       {
         step: 1,
-        title: 'Targeted Gel Baiting',
-        description: 'Application of odorless, food-grade gel dots (Fipronil/Imidacloprid) in hidden crevices, electrical outlets, and appliance motors.'
+        title: 'Herbal Gel Matrix Baiting',
+        description: 'Target dots of non-repellent cascading gel applied inside cabinet hinges and appliance motors.'
       },
       {
         step: 2,
-        title: 'Drain & Duct Flushing',
-        description: 'Eco-friendly micro-emulsion spray treatment inside drainage pipelines and under-counter cavities.'
+        title: 'Micro-Emulsion Crevice Spray',
+        description: 'Treating floor drain junctions and pipe voids with eco-friendly odorless synthetic pyrethroids.'
       },
       {
         step: 3,
-        title: 'Sanitation Protection Protocol',
-        description: 'Placement of sticky monitoring traps and client guidance on sealing entry points and moisture sources.'
+        title: 'Sanitation Audit',
+        description: 'Deploying sticky monitoring traps and providing client guidance on sealing entry cracks.'
+      }
+    ]
+  },
+  {
+    slug: 'american-cockroach',
+    name: 'American Cockroach',
+    scientificName: 'Periplaneta americana',
+    category: 'Crawling',
+    tagline: 'Sewer & Drainage Roach Flushing Protocol',
+    shortHook: 'Large reddish-brown sewer roaches invading bathrooms and commercial drain shafts.',
+    primarySeason: 'Summer & Monsoon',
+    dangerLevel: 'High',
+    imageUrl: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=800&q=80',
+    description: 'American cockroaches thrive in Gurgaon drainage pipelines, sewage manholes, and dark basements. They fly into apartment windows during humid summer nights.',
+    appearance: 'Large reddish-brown body (35-40 mm) with a yellowish band behind the head shield and fully developed wings.',
+    behavior: 'Prefers dark, damp areas like sewer gullies, boiler rooms, and basement storage voids.',
+    whyItsAProblem: [
+      'Vectors for E. coli, Dysentery, and Cholera pathogens from sewers.',
+      'Capable of short-distance flight into balcony doors and windows.',
+      'Creates high distress due to large physical size.'
+    ],
+    signsOfInfestation: [
+      'Large roaches emerging from floor traps or balcony drains at night.',
+      'Cylindrical droppings with ridged sides around drainage pipes.'
+    ],
+    treatmentProcess: [
+      {
+        step: 1,
+        title: 'Drainage Trench Flushing',
+        description: 'Injecting residual micro-emulsion sprays into main drainage traps and shaft gullies.'
+      },
+      {
+        step: 2,
+        title: 'Perimeter Barrier Treatment',
+        description: 'Applying long-lasting residual barrier along outdoor building foundations.'
+      },
+      {
+        step: 3,
+        title: 'Drain Mesh Guidance',
+        description: 'Recommending stainless steel drain covers and sealing wall pipe entry gaps.'
       }
     ]
   },
@@ -147,8 +187,8 @@ export const pestsData: Pest[] = [
   },
   {
     slug: 'rodents',
-    name: 'Rodents (Rats & Mice)',
-    scientificName: 'Rattus rattus & Mus musculus',
+    name: 'Roof Rats & Bandicoots (Rattus rattus)',
+    scientificName: 'Rattus rattus & Bandicota indica',
     category: 'Rodents',
     tagline: 'Stop Cable Gnawing, Wire Fires & Contamination',
     shortHook: 'Agile pests capable of chewing electrical wiring, structural pipes, and spreading leptospirosis.',
@@ -156,7 +196,7 @@ export const pestsData: Pest[] = [
     dangerLevel: 'Severe',
     imageUrl: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80',
     description: 'Rats and mice pose serious safety hazards in Gurgaon high-rises and commercial buildings by chewing live electrical wiring, causing short circuits and fires.',
-    appearance: 'Rats are 15-25 cm with long tails; mice are 5-10 cm with small ears and pointy snouts.',
+    appearance: 'Rats are 15-25 cm with long tails; bandicoots are large heavy rodents up to 40 cm.',
     behavior: 'Constant gnawers because their incisors never stop growing. Highly intelligent, nocturnal, and adept at climbing pipes and false ceilings.',
     whyItsAProblem: [
       'Presents catastrophic fire risks by chewing electrical and internet wiring.',
@@ -187,8 +227,48 @@ export const pestsData: Pest[] = [
     ]
   },
   {
+    slug: 'house-mouse',
+    name: 'House Mouse',
+    scientificName: 'Mus musculus',
+    category: 'Rodents',
+    tagline: 'Precision Trapping & Kitchen Pantry Shield',
+    shortHook: 'Tiny, fast-moving mice that nest inside kitchen cabinets and electrical appliances.',
+    primarySeason: 'Year-Round (Seeking Indoor Food Sources)',
+    dangerLevel: 'High',
+    imageUrl: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?auto=format&fit=crop&w=800&q=80',
+    description: 'House mice squeeze through gaps as small as a pencil eraser (6 mm). They contaminate stored pantry food and ruin upholstery.',
+    appearance: 'Small dusty gray-brown body (5-10 cm) with large ears, small eyes, and a hairless tail.',
+    behavior: 'Curious, fast breeders that construct nests from shredded paper, fabric, and insulation.',
+    whyItsAProblem: [
+      'Nibbles food packages, spreading bacteria via urine and droppings.',
+      'Chews delicate furniture fabric, carpets, and internal wiring.',
+      'Multiplies rapidly with up to 10 litters per year.'
+    ],
+    signsOfInfestation: [
+      'Tiny rod-shaped droppings (3-6 mm) near food boxes.',
+      'Shredded paper or cloth nests inside dark storage closets.'
+    ],
+    treatmentProcess: [
+      {
+        step: 1,
+        title: 'Interior Glue Board Deployment',
+        description: 'Placing non-toxic sticky boards along run paths behind appliances and cabinets.'
+      },
+      {
+        step: 2,
+        title: 'Gap Sealing Exclusion',
+        description: 'Sealing pipe entry holes with copper mesh and silicone sealant.'
+      },
+      {
+        step: 3,
+        title: 'Follow-Up Inspection',
+        description: 'Clearing trapped mice and inspecting food storage pantries.'
+      }
+    ]
+  },
+  {
     slug: 'ants',
-    name: 'Ants',
+    name: 'Red Fire Ants & Carpenter Ants',
     scientificName: 'Monomorium pharaonis & Camponotus',
     category: 'Crawling',
     tagline: 'Target the Queen for Complete Nest Elimination',
@@ -229,7 +309,7 @@ export const pestsData: Pest[] = [
   },
   {
     slug: 'mosquitoes',
-    name: 'Mosquitoes',
+    name: 'Mosquitoes (Aedes & Anopheles)',
     scientificName: 'Aedes aegypti & Anopheles stephensi',
     category: 'Flying',
     tagline: 'Dengue & Chikungunya Shield for Home & Lawns',
@@ -268,8 +348,88 @@ export const pestsData: Pest[] = [
     ]
   },
   {
+    slug: 'house-fly',
+    name: 'House Fly & Fruit Fly',
+    scientificName: 'Musca domestica & Drosophila',
+    category: 'Flying',
+    tagline: 'Kitchen Sanitation & Fly Trap Protocol',
+    shortHook: 'Filth-inhabiting flies carrying foodborne bacteria into kitchens and dining halls.',
+    primarySeason: 'Summer & Monsoon',
+    dangerLevel: 'Moderate',
+    imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
+    description: 'Flies breed in decaying organic garbage, outdoor drain traps, and overripe fruit, carrying disease organisms on their hairy legs.',
+    appearance: 'House flies are gray (6-7 mm) with four dark stripes; fruit flies are tiny tan flies (3 mm) with red eyes.',
+    behavior: 'Attracted to open food, rotten garbage, and moist drains, reproducing rapidly in warm weather.',
+    whyItsAProblem: [
+      'Transmits typhoid, cholera, dysentery, and food poisoning bacteria.',
+      'Causes immediate FSSAI audit penalties for food service establishments.',
+      'Annoys diners and family members in eating spaces.'
+    ],
+    signsOfInfestation: [
+      'Flies hovering around kitchen trash bins or food prep counters.',
+      'Dark specks of fly vomit/excrement on light fixtures and walls.'
+    ],
+    treatmentProcess: [
+      {
+        step: 1,
+        title: 'Insect Light Trap (ILT) Installation',
+        description: 'Mounting UV glue-board fly catchers away from direct food prep counters.'
+      },
+      {
+        step: 2,
+        title: 'Organic Drain Flushing',
+        description: 'Treating kitchen floor traps with bio-enzymatic drain cleaners to eliminate fly breeding sludge.'
+      },
+      {
+        step: 3,
+        title: 'Air Curtain & Door Mesh Guidance',
+        description: 'Advising on fly mesh screens and high-velocity air barrier curtains for commercial entrances.'
+      }
+    ]
+  },
+  {
+    slug: 'stinging-insects',
+    name: 'Wasps & Honey Bees',
+    scientificName: 'Vespidae & Apis dorsata',
+    category: 'Flying',
+    tagline: 'Safe Wasp Nest Removal for Balconies & Rooftops',
+    shortHook: 'Aggressive stinging insects building paper nests or hives on apartment balconies.',
+    primarySeason: 'Spring & Summer',
+    dangerLevel: 'High',
+    imageUrl: 'https://images.unsplash.com/photo-1587049352847-4a222e784d38?auto=format&fit=crop&w=800&q=80',
+    description: 'Yellow jackets, hornets, and honeybees frequently build large comb nests under high-rise balcony ledges and window overhangs in Gurgaon complexes.',
+    appearance: 'Black and yellow striped bodies (10-25 mm) with powerful stings and thin waists.',
+    behavior: 'Defends nests aggressively when humans come close. Can sting multiple times repeatedly.',
+    whyItsAProblem: [
+      'Multiple stings cause severe pain, facial swelling, and life-threatening anaphylactic shock.',
+      'Blocks balcony usage, window opening, and rooftop solar panel access.',
+      'Presents dangerous hazards to children playing in high-rise balconies.'
+    ],
+    signsOfInfestation: [
+      'Visible grey paper mud nests attached to balcony ceilings or air conditioner brackets.',
+      'Frequent wasps buzzing around outdoor lighting or flower boxes.'
+    ],
+    treatmentProcess: [
+      {
+        step: 1,
+        title: 'Night Protection Suit Deployment',
+        description: 'Technicians wearing heavy protective suits approach nests during low-activity hours.'
+      },
+      {
+        step: 2,
+        title: 'Instant Knockdown Aerosol Blast',
+        description: 'Direct injection of high-pressure quick-freeze aerosol to neutralize nest inhabitants.'
+      },
+      {
+        step: 3,
+        title: 'Complete Removal & Deterrent Spray',
+        description: 'Physical scraping of nest anchor points and treating surfaces with residual repelling agents.'
+      }
+    ]
+  },
+  {
     slug: 'spiders',
-    name: 'Spiders',
+    name: 'Spiders & Cobweb Removal',
     scientificName: 'Araneae (Huntsman & Cellar Spiders)',
     category: 'Crawling',
     tagline: 'Keep Walls, Ceilings & Storage Clean & Web-Free',
@@ -466,46 +626,6 @@ export const pestsData: Pest[] = [
         step: 3,
         title: 'Sealing & Varnish Protection',
         description: 'Guidance on top-coat sealing to block new adult beetles from depositing eggs.'
-      }
-    ]
-  },
-  {
-    slug: 'stinging-insects',
-    name: 'Wasps & Bees',
-    scientificName: 'Vespidae & Apis dorsata',
-    category: 'Flying',
-    tagline: 'Safe Wasp Nest Removal for Balconies & Rooftops',
-    shortHook: 'Aggressive stinging insects building paper nests or hives on apartment balconies.',
-    primarySeason: 'Spring & Summer',
-    dangerLevel: 'High',
-    imageUrl: 'https://images.unsplash.com/photo-1587049352847-4a222e784d38?auto=format&fit=crop&w=800&q=80',
-    description: 'Yellow jackets, hornets, and honeybees frequently build large comb nests under high-rise balcony ledges and window overhangs in Gurgaon complexes.',
-    appearance: 'Black and yellow striped bodies (10-25 mm) with powerful stings and thin waists.',
-    behavior: 'Defends nests aggressively when humans come close. Can sting multiple times repeatedly.',
-    whyItsAProblem: [
-      'Multiple stings cause severe pain, facial swelling, and life-threatening anaphylactic shock.',
-      'Blocks balcony usage, window opening, and rooftop solar panel access.',
-      'Presents dangerous hazards to children playing in high-rise balconies.'
-    ],
-    signsOfInfestation: [
-      'Visible grey paper mud nests attached to balcony ceilings or air conditioner brackets.',
-      'Frequent wasps buzzing around outdoor lighting or flower boxes.'
-    ],
-    treatmentProcess: [
-      {
-        step: 1,
-        title: 'Night Protection Suit Deployment',
-        description: 'Technicians wearing heavy protective suits approach nests during low-activity hours.'
-      },
-      {
-        step: 2,
-        title: 'Instant Knockdown Aerosol Blast',
-        description: 'Direct injection of high-pressure quick-freeze aerosol to neutralize nest inhabitants.'
-      },
-      {
-        step: 3,
-        title: 'Complete Removal & Deterrent Spray',
-        description: 'Physical scraping of nest anchor points and treating surfaces with residual repelling agents.'
       }
     ]
   }

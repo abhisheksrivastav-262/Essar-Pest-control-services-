@@ -1,10 +1,9 @@
 import React from 'react';
-import Metadata from 'next';
-import Link from 'next/link';
+import Image from 'next/image';
 import { PageHero } from '@/components/PageHero';
 import { QuoteForm } from '@/components/QuoteForm';
 import { CTABanner } from '@/components/CTABanner';
-import { Check, ShieldCheck, HelpCircle, Phone, ArrowRight } from 'lucide-react';
+import { Check, ShieldCheck, HelpCircle, Phone } from 'lucide-react';
 
 export const metadata = {
   title: 'Residential Pest Control Gurgaon | Home Anti-Termite & Gel Packages',
@@ -18,6 +17,7 @@ const PLAN_TIERS = [
     price: '₹999',
     period: 'Single Service Visit',
     popular: false,
+    image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=600&q=80',
     description: 'Ideal for small apartments needing fast, targeted eradication of cockroaches, ants, or silverfish.',
     features: [
       'Odorless Kitchen Gel Baiting',
@@ -32,6 +32,7 @@ const PLAN_TIERS = [
     price: '₹1,999',
     period: '1 Year (3 Service Visits)',
     popular: true,
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80',
     description: 'Our most popular annual home plan with 3 scheduled visits covering all crawling and flying insects.',
     features: [
       'Everything in Basic Plan',
@@ -47,6 +48,7 @@ const PLAN_TIERS = [
     price: '₹3,499',
     period: '2 Years + Termite Shield',
     popular: false,
+    image: 'https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=600&q=80',
     description: 'Total peace of mind combining annual general pest control with subterranean termite drill-and-fill barrier protection.',
     features: [
       'Everything in Standard Plan',
@@ -87,7 +89,7 @@ export default function ResidentialServicesPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Residential Services' }]}
       />
 
-      {/* Overview Section */}
+      {/* Overview Section with Supporting Kitchen Gel Photo */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
@@ -101,23 +103,39 @@ export default function ResidentialServicesPage() {
               Living in Gurgaon high-rises or independent villas exposes homes to termites, German cockroaches, bed bugs, and seasonal mosquitoes. Nexora Residential Services combines advanced entomological inspection with eco-friendly treatments that eradicate pests at the source while preserving indoor air quality.
             </p>
 
-            {/* Coverage Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-1">
-                <div className="font-bold text-brand-slate text-sm">Interior Gel Barrier</div>
-                <div className="text-xs text-slate-500">Odorless gel target applied behind appliances and cabinets.</div>
+            {/* Photo & Features Grid Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2 items-center">
+              {/* Kitchen Gel Photo */}
+              <div className="md:col-span-5 h-48 rounded-2xl overflow-hidden relative shadow-md border-2 border-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=600&q=80"
+                  alt="Odorless Kitchen Gel Application in Gurgaon Apartment"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
+                  <span className="text-[11px] font-bold text-white">Odorless Kitchen Gel Matrix</span>
+                </div>
               </div>
-              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-1">
-                <div className="font-bold text-brand-slate text-sm">Exterior Perimeter Shield</div>
-                <div className="text-xs text-slate-500">Balcony and window track sprays stopping outdoor invaders.</div>
-              </div>
-              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-1">
-                <div className="font-bold text-brand-slate text-sm">Drain & Trench Flushing</div>
-                <div className="text-xs text-slate-500">Neutralizing cockroach and silverfish breeding in pipes.</div>
-              </div>
-              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-1">
-                <div className="font-bold text-brand-slate text-sm">100% Free Callout Guarantee</div>
-                <div className="text-xs text-slate-500">Unlimited free re-visits during your service warranty.</div>
+
+              {/* Coverage Grid */}
+              <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm space-y-1">
+                  <div className="font-bold text-brand-slate text-xs">Interior Gel Barrier</div>
+                  <div className="text-[11px] text-slate-500">Applied behind appliances & cabinets.</div>
+                </div>
+                <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm space-y-1">
+                  <div className="font-bold text-brand-slate text-xs">Exterior Perimeter Shield</div>
+                  <div className="text-[11px] text-slate-500">Balcony and window track sprays.</div>
+                </div>
+                <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm space-y-1">
+                  <div className="font-bold text-brand-slate text-xs">Drain & Trench Flushing</div>
+                  <div className="text-[11px] text-slate-500">Neutralizing pipe breeding zones.</div>
+                </div>
+                <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm space-y-1">
+                  <div className="font-bold text-brand-slate text-xs">100% Free Callout</div>
+                  <div className="text-[11px] text-slate-500">Unlimited free re-visits in warranty.</div>
+                </div>
               </div>
             </div>
           </div>
@@ -128,7 +146,7 @@ export default function ResidentialServicesPage() {
         </div>
       </section>
 
-      {/* Pricing / Plan Tiers */}
+      {/* Pricing / Plan Tiers with Image Headers */}
       <section className="bg-slate-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -147,53 +165,60 @@ export default function ResidentialServicesPage() {
             {PLAN_TIERS.map((tier, idx) => (
               <div
                 key={idx}
-                className={`rounded-3xl p-8 flex flex-col justify-between relative transition-all duration-300 ${
+                className={`rounded-3xl flex flex-col justify-between relative transition-all duration-300 overflow-hidden ${
                   tier.popular
                     ? 'bg-gradient-to-b from-brand-green-900 to-slate-950 border-2 border-brand-green-500 shadow-2xl scale-105'
                     : 'bg-slate-800/80 border border-slate-700 hover:border-slate-600'
                 }`}
               >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-amber-500 text-white font-extrabold text-xs uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
-                    Most Popular Choice
-                  </div>
-                )}
-
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-black text-white">{tier.name}</h3>
-                    <p className="text-xs text-slate-400 mt-1">{tier.description}</p>
-                  </div>
-
-                  <div className="border-y border-slate-700/80 py-4">
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-black text-brand-amber-400">{tier.price}</span>
-                      <span className="text-xs text-slate-400 font-medium">/ {tier.period}</span>
+                {/* Visual Header Image per Plan */}
+                <div className="relative h-40 w-full bg-slate-800">
+                  <Image src={tier.image} alt={tier.name} fill className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+                  {tier.popular && (
+                    <div className="absolute top-3 right-3 bg-brand-amber-500 text-white font-extrabold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-md z-10">
+                      Most Popular
                     </div>
-                  </div>
-
-                  <ul className="space-y-3 text-xs text-slate-300">
-                    {tier.features.map((feat, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-2.5">
-                        <Check className="w-4 h-4 text-brand-green-400 flex-shrink-0 mt-0.5" />
-                        <span>{feat}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  )}
                 </div>
 
-                <div className="pt-8">
-                  <a
-                    href="tel:8368334476"
-                    className={`w-full py-3.5 px-4 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 transition-all shadow-md ${
-                      tier.popular
-                        ? 'bg-brand-amber-500 hover:bg-brand-amber-600 text-white'
-                        : 'bg-brand-green-500 hover:bg-brand-green-600 text-white'
-                    }`}
-                  >
-                    <Phone className="w-4 h-4 fill-current" />
-                    <span>Book {tier.name}</span>
-                  </a>
+                <div className="p-6 md:p-8 space-y-6 flex-1 flex flex-col justify-between">
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-xl font-black text-white">{tier.name}</h3>
+                      <p className="text-xs text-slate-400 mt-1">{tier.description}</p>
+                    </div>
+
+                    <div className="border-y border-slate-700/80 py-3">
+                      <div className="flex items-baseline gap-2">
+                        <span className="text-3xl font-black text-brand-amber-400">{tier.price}</span>
+                        <span className="text-xs text-slate-400 font-medium">/ {tier.period}</span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-2.5 text-xs text-slate-300">
+                      {tier.features.map((feat, fIdx) => (
+                        <li key={fIdx} className="flex items-start gap-2">
+                          <Check className="w-4 h-4 text-brand-green-400 flex-shrink-0 mt-0.5" />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="pt-4">
+                    <a
+                      href="tel:8368334476"
+                      className={`w-full py-3 px-4 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 transition-all shadow-md ${
+                        tier.popular
+                          ? 'bg-brand-amber-500 hover:bg-brand-amber-600 text-white'
+                          : 'bg-brand-green-500 hover:bg-brand-green-600 text-white'
+                      }`}
+                    >
+                      <Phone className="w-4 h-4 fill-current" />
+                      <span>Book {tier.name}</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

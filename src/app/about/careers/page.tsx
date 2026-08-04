@@ -1,10 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
-import { openPositions, JobPosition } from '@/data/careers';
-import { Briefcase, MapPin, DollarSign, ChevronDown, CheckCircle2, Send, UploadCloud, AlertCircle } from 'lucide-react';
+import { openPositions } from '@/data/careers';
+import { MapPin, DollarSign, ChevronDown, CheckCircle2, Send, UploadCloud, AlertCircle, MessageSquare } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
 interface ApplicationFormData {
@@ -26,6 +27,7 @@ export default function CareersPage() {
     register,
     handleSubmit,
     setValue,
+    getValues,
     reset,
     formState: { errors },
   } = useForm<ApplicationFormData>({
@@ -40,13 +42,37 @@ export default function CareersPage() {
     setValue('position', title);
   };
 
+  const sendApplicationToWhatsApp = (data: ApplicationFormData) => {
+    const name = data.name || 'Applicant';
+    const phone = data.phone || 'Not provided';
+    const position = data.position || applyingJobTitle;
+    const email = data.email || 'N/A';
+    const notes = data.notes || 'Interested in joining Nexora Pest Management in Gurgaon.';
+
+    const formattedMessage = `💼 New Job Application - Nexora HR\n\nPosition: ${position}\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nExperience / Cover Notes:\n${notes}\n\nSource: Website Careers Page`;
+
+    const whatsappUrl = `https://wa.me/918368334476?text=${encodeURIComponent(formattedMessage)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const onSubmit = async (data: ApplicationFormData) => {
     setIsSubmitting(true);
-    await new Promise((r) => setTimeout(r, 800));
-    console.log('Job Application Submitted:', data);
+    await new Promise((r) => setTimeout(r, 600));
+    console.log('Job Application Lead Received:', data);
+    sendApplicationToWhatsApp(data);
     setIsSubmitting(false);
     setIsSubmitted(true);
     reset();
+  };
+
+  const handleDirectWhatsAppApply = () => {
+    const data = getValues();
+    if (data.name && data.phone) {
+      sendApplicationToWhatsApp(data);
+    } else {
+      const defaultMessage = `💼 New Job Application - Nexora HR\n\nI am interested in applying for open positions at Nexora Gurgaon.\nCall Helpline: 8368334476\n\nSource: Website Careers Quick Apply`;
+      window.open(`https://wa.me/918368334476?text=${encodeURIComponent(defaultMessage)}`, '_blank');
+    }
   };
 
   return (
@@ -62,7 +88,7 @@ export default function CareersPage() {
         badge="Gurgaon HQ Hiring"
       />
 
-      {/* Culture & Benefits */}
+      {/* Culture & Benefits with Real Stock Photos */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center max-w-3xl mx-auto space-y-2">
           <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">
@@ -77,47 +103,91 @@ export default function CareersPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center font-bold">
-              💰
+          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between">
+            <div className="relative h-44 w-full bg-slate-100">
+              <Image
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+                alt="Competitive Compensation & Career Growth at Nexora"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
+                <span className="text-xs font-extrabold text-white">💰 High Monthly Earnings</span>
+              </div>
             </div>
-            <h3 className="font-extrabold text-brand-slate text-base">Competitive Compensation</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Above-market salary packages, monthly performance bonuses, petrol allowances, and annual appraisal cycles.
-            </p>
+            <div className="p-6 space-y-2 flex-1">
+              <h3 className="font-extrabold text-brand-slate text-base">Competitive Compensation</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Above-market salary packages, monthly performance bonuses, petrol allowances, and annual appraisal cycles.
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-brand-amber-50 text-brand-amber-500 flex items-center justify-center font-bold">
-              🎓
+          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between">
+            <div className="relative h-44 w-full bg-slate-100">
+              <Image
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
+                alt="PCAI Entomological Training Certification"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
+                <span className="text-xs font-extrabold text-white">🎓 Certified Field Training</span>
+              </div>
             </div>
-            <h3 className="font-extrabold text-brand-slate text-base">PCAI Entomological Training</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Receive formal certification in chemical handling safety, IPM procedures, and subterranean termite barriering.
-            </p>
+            <div className="p-6 space-y-2 flex-1">
+              <h3 className="font-extrabold text-brand-slate text-base">PCAI Entomological Training</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Receive formal certification in chemical handling safety, IPM procedures, and subterranean termite barriering.
+              </p>
+            </div>
           </div>
 
-          <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center font-bold">
-              🛡️
+          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between">
+            <div className="relative h-44 w-full bg-slate-100">
+              <Image
+                src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80"
+                alt="Health Insurance & PPE Gear for Technicians"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
+                <span className="text-xs font-extrabold text-white">🛡️ Health & PPE Protection</span>
+              </div>
             </div>
-            <h3 className="font-extrabold text-brand-slate text-base">Health Insurance & PPE</h3>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Full medical insurance coverage for technicians and family, plus state-of-the-art protective gear.
-            </p>
+            <div className="p-6 space-y-2 flex-1">
+              <h3 className="font-extrabold text-brand-slate text-base">Health Insurance & PPE</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Full medical insurance coverage for technicians and family, plus state-of-the-art protective gear.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Open Positions Accordion */}
+      {/* Open Positions Section with Header Visual Banner */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="text-center max-w-3xl mx-auto space-y-2">
-          <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">
-            Current Gurgaon Vacancies
+        <div className="relative rounded-3xl overflow-hidden shadow-md bg-brand-slate p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800">
+          <div className="relative z-10 max-w-xl space-y-2 text-center md:text-left">
+            <div className="text-xs font-bold text-brand-amber-400 uppercase tracking-widest">
+              Current Gurgaon Vacancies
+            </div>
+            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
+              Open Positions ({openPositions.length})
+            </h2>
+            <p className="text-xs text-slate-300">
+              Select an open role below to view full responsibilities and submit your application directly to our HR team.
+            </p>
           </div>
-          <h2 className="text-3xl font-extrabold text-brand-slate tracking-tight">
-            Open Positions ({openPositions.length})
-          </h2>
+
+          <div className="relative z-10 w-full md:w-64 h-32 rounded-2xl overflow-hidden border-2 border-white/20 shadow-md">
+            <Image
+              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+              alt="Nexora Field Specialist at Work in Gurgaon"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
 
         <div className="space-y-4">
@@ -130,7 +200,7 @@ export default function CareersPage() {
                   isExpanded ? 'border-brand-green-500 shadow-xl' : 'border-slate-200/80 shadow-sm'
                 }`}
               >
-                {/* Header Header */}
+                {/* Header */}
                 <div
                   onClick={() => toggleExpand(job.id, job.title)}
                   className="p-6 cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-4 select-none hover:bg-slate-50/50"
@@ -232,10 +302,19 @@ export default function CareersPage() {
           {isSubmitted ? (
             <div className="bg-brand-green-50 border border-brand-green-200 p-6 rounded-2xl text-center space-y-3">
               <CheckCircle2 className="w-12 h-12 text-brand-green-500 mx-auto" />
-              <h4 className="font-bold text-brand-slate text-lg">Application Submitted Successfully!</h4>
+              <h4 className="font-bold text-brand-slate text-lg">Application Submitted & Sent to WhatsApp!</h4>
               <p className="text-xs text-slate-600">
                 Our HR manager will review your details and call you on your mobile number within 24 business hours.
               </p>
+
+              <button
+                onClick={handleDirectWhatsAppApply}
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-sm mt-2"
+              >
+                <MessageSquare className="w-4 h-4 fill-current" />
+                <span>Re-open WhatsApp Chat</span>
+              </button>
+
               <button
                 onClick={() => setIsSubmitted(false)}
                 className="text-xs font-bold text-brand-green-600 hover:underline pt-2 block mx-auto"
@@ -314,7 +393,7 @@ export default function CareersPage() {
                 </div>
               </div>
 
-              {/* Fake Resume File Upload Box */}
+              {/* Resume File Upload Box */}
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase mb-1">
                   Upload Resume / CV (PDF or DOCX)
@@ -339,20 +418,31 @@ export default function CareersPage() {
                 ></textarea>
               </div>
 
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold py-3.5 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
-              >
-                {isSubmitting ? (
-                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                ) : (
-                  <>
-                    <span>Submit Job Application</span>
-                    <Send className="w-4 h-4" />
-                  </>
-                )}
-              </button>
+              <div className="space-y-2.5 pt-1">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold py-3.5 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
+                >
+                  {isSubmitting ? (
+                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  ) : (
+                    <>
+                      <span>Submit Application & Send WhatsApp</span>
+                      <Send className="w-4 h-4" />
+                    </>
+                  )}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleDirectWhatsAppApply}
+                  className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold text-sm py-3 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
+                >
+                  <MessageSquare className="w-4 h-4 fill-current" />
+                  <span>Apply Directly via WhatsApp (8368334476)</span>
+                </button>
+              </div>
             </form>
           )}
         </div>

@@ -62,12 +62,12 @@ export default function SinglePestPage({ params }: PestPageProps) {
           <div className="lg:col-span-7 space-y-10">
             {/* Top Overview Box */}
             <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-md space-y-6">
-              <div className="relative h-72 w-full rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center p-4">
+              <div className="relative h-72 w-full rounded-2xl overflow-hidden bg-slate-100">
                 <Image
                   src={pest.imageUrl}
                   alt={`Nexora Pest Management - ${pest.name} Control`}
                   fill
-                  className="object-contain p-4"
+                  className="object-cover"
                 />
                 <div className="absolute top-4 left-4 bg-brand-slate/90 text-white font-bold text-xs px-3 py-1.5 rounded-full backdrop-blur-md">
                   Scientific Name: {pest.scientificName}

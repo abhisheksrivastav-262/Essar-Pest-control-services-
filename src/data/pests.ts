@@ -64,6 +64,47 @@ export const pestsData: Pest[] = [
     ]
   },
   {
+    slug: 'cockroaches',
+    name: 'Cockroaches (German & American)',
+    scientificName: 'Blattodea (German & American Cockroaches)',
+    category: 'Crawling',
+    tagline: 'Odorless Kitchen & Drainage Roach Eradication',
+    shortHook: 'Rapidly multiplying pests carrying salmonella and contaminating food pantries.',
+    primarySeason: 'Year-Round (Peak Spring & Summer)',
+    dangerLevel: 'High',
+    imageUrl: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=800&q=80',
+    description: 'Cockroaches are among the most frequent kitchen and drainage pests in Gurgaon apartments and restaurant pantries. They hide inside cabinet hinges, appliance motors, and drainage pipelines.',
+    appearance: 'Tan to dark reddish-brown body (12-40 mm) with oval flattened shape.',
+    behavior: 'Nocturnal scavengers that nest close to moisture and food sources in warm indoor environments.',
+    whyItsAProblem: [
+      'Contaminates open food and preparation surfaces with pathogenic bacteria.',
+      'Triggers severe allergic reactions and asthmatic attacks in young children.',
+      'Emits unpleasant musty odors and stains wall crevices.'
+    ],
+    signsOfInfestation: [
+      'Visible small or large roaches scurrying when lights are turned on.',
+      'Fine pepper-like black droppings inside cabinet drawers or along drainage shafts.',
+      'Egg capsules (oothecae) hidden in furniture corners.'
+    ],
+    treatmentProcess: [
+      {
+        step: 1,
+        title: 'Herbal Gel Matrix Baiting',
+        description: 'Target dots of non-repellent cascading gel applied inside cabinet hinges and appliance motors.'
+      },
+      {
+        step: 2,
+        title: 'Micro-Emulsion Crevice Spray',
+        description: 'Treating floor drain junctions and pipe voids with eco-friendly odorless synthetic pyrethroids.'
+      },
+      {
+        step: 3,
+        title: 'Sanitation Audit',
+        description: 'Deploying sticky monitoring traps and providing client guidance on sealing entry cracks.'
+      }
+    ]
+  },
+  {
     slug: 'german-cockroach',
     name: 'German Cockroach',
     scientificName: 'Blattella germanica',

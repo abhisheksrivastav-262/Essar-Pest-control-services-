@@ -126,41 +126,17 @@ export const Header: React.FC = () => {
               Blog
             </Link>
 
-            {/* About Us Dropdown */}
-            <div
-              className="relative"
-              onMouseEnter={() => setAboutDropdownOpen(true)}
-              onMouseLeave={() => setAboutDropdownOpen(false)}
+            {/* About Us */}
+            <Link
+              href="/about"
+              className={`px-3 py-2 rounded-lg transition-colors ${
+                isActive('/about')
+                  ? 'text-brand-green-500 bg-brand-green-50 font-bold'
+                  : 'hover:text-brand-green-500 hover:bg-slate-50'
+              }`}
             >
-              <button
-                className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
-                  pathname.includes('/about')
-                    ? 'text-brand-green-500 bg-brand-green-50 font-bold'
-                    : 'hover:text-brand-green-500 hover:bg-slate-50'
-                }`}
-              >
-                <span>About Us</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${aboutDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {aboutDropdownOpen && (
-                <div className="absolute top-full left-0 w-52 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 mt-1 animate-fadeIn z-50">
-                  <Link
-                    href="/about"
-                    className="block px-4 py-2.5 hover:bg-brand-green-50 hover:text-brand-green-500 font-medium text-slate-800 text-sm"
-                  >
-                    Our Story & Certifications
-                  </Link>
-                  <div className="border-t border-slate-100 my-1"></div>
-                  <Link
-                    href="/about/careers"
-                    className="block px-4 py-2.5 hover:bg-brand-green-50 hover:text-brand-green-500 font-medium text-slate-800 text-sm"
-                  >
-                    Careers & Open Roles
-                  </Link>
-                </div>
-              )}
-            </div>
+              About Us
+            </Link>
 
             {/* Contact Us */}
             <Link
@@ -269,25 +245,13 @@ export const Header: React.FC = () => {
               Pest Blog & Advice
             </Link>
 
-            <div className="py-1 border-b border-slate-100">
-              <div className="font-bold text-slate-800 mb-1 text-xs uppercase tracking-wider text-brand-green-500">
-                About Us
-              </div>
-              <Link
-                href="/about"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-slate-700 hover:text-brand-green-500 py-1.5 pl-3 text-sm font-medium"
-              >
-                Company Story & Certifications
-              </Link>
-              <Link
-                href="/about/careers"
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-slate-700 hover:text-brand-green-500 py-1.5 pl-3 text-sm font-medium"
-              >
-                Careers at Nexora
-              </Link>
-            </div>
+            <Link
+              href="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block font-bold text-slate-800 py-2 border-b border-slate-100"
+            >
+              About Us & Certifications
+            </Link>
 
             <Link
               href="/contact-us"

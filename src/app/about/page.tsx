@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
 import { QuoteForm } from '@/components/QuoteForm';
-import { Award, MapPin, Users, Target, CheckCircle2 } from 'lucide-react';
+import { Award, MapPin, Users, Target } from 'lucide-react';
 
 export const metadata = {
   title: 'About Nexora Pest Management Gurgaon | ISO & PCAI Certified',
@@ -201,38 +200,6 @@ export default function AboutPage() {
               <p className="text-xs text-slate-500 leading-relaxed">{member.bio}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Link to Careers with Supporting Visual */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-brand-slate to-slate-900 text-white rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800 relative overflow-hidden">
-          <div className="relative z-10 space-y-1 max-w-xl">
-            <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-brand-amber-400 uppercase tracking-wider bg-brand-amber-500/20 px-3 py-0.5 rounded-full mb-1">
-              <CheckCircle2 className="w-3.5 h-3.5" /> Hiring in Gurgaon
-            </div>
-            <h3 className="text-2xl font-extrabold">Want to Join the Nexora Team?</h3>
-            <p className="text-xs text-slate-300">
-              We are hiring certified technicians, customer care managers, and sales representatives in Gurgaon.
-            </p>
-          </div>
-
-          <div className="relative z-10 flex items-center gap-4">
-            <div className="hidden sm:block relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-white/20 shadow-md">
-              <Image
-                src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=300&q=80"
-                alt="Nexora Technician Career Opportunity"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <Link
-              href="/about/careers"
-              className="bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-sm py-3.5 px-6 rounded-xl transition-all shadow-md flex-shrink-0"
-            >
-              Explore Openings & Apply
-            </Link>
-          </div>
         </div>
       </section>
 

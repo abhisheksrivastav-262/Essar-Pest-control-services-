@@ -7,7 +7,7 @@ import { QuoteForm } from '@/components/QuoteForm';
 import { PestCard } from '@/components/PestCard';
 import { CTABanner } from '@/components/CTABanner';
 import { pestsData } from '@/data/pests';
-import { ShieldCheck, AlertCircle, Calendar, CheckCircle2, Phone, ArrowLeft } from 'lucide-react';
+import { AlertCircle, Calendar, ArrowLeft } from 'lucide-react';
 
 interface PestPageProps {
   params: {
@@ -38,7 +38,6 @@ export default function SinglePestPage({ params }: PestPageProps) {
     notFound();
   }
 
-  // Get 3 related pests from same category or list
   const relatedPests = pestsData
     .filter((p) => p.slug !== pest.slug)
     .slice(0, 3);
@@ -54,6 +53,7 @@ export default function SinglePestPage({ params }: PestPageProps) {
           { label: pest.name },
         ]}
         badge={`${pest.category} Management Specialist`}
+        posterUrl={pest.imageUrl}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
@@ -109,23 +109,41 @@ export default function SinglePestPage({ params }: PestPageProps) {
               </div>
             </div>
 
-            {/* Why It's a Problem */}
-            <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-md space-y-4">
+            {/* Why It's a Problem (With Supporting Visual Card) */}
+            <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-md space-y-6">
               <h3 className="text-xl font-extrabold text-brand-slate flex items-center gap-2">
                 <AlertCircle className="w-5 h-5 text-brand-amber-500" />
                 Why {pest.name} Are a Major Hazard in Gurgaon
               </h3>
-              <ul className="space-y-2.5">
-                {pest.whyItsAProblem.map((prob, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-xs text-slate-700 leading-relaxed">
-                    <span className="w-2 h-2 rounded-full bg-brand-amber-500 mt-1.5 flex-shrink-0" />
-                    <span>{prob}</span>
-                  </li>
-                ))}
-              </ul>
+
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <div className="md:col-span-7">
+                  <ul className="space-y-2.5">
+                    {pest.whyItsAProblem.map((prob, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-xs text-slate-700 leading-relaxed">
+                        <span className="w-2 h-2 rounded-full bg-brand-amber-500 mt-1.5 flex-shrink-0" />
+                        <span>{prob}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Supporting Hazard Photo */}
+                <div className="md:col-span-5 h-48 rounded-2xl overflow-hidden relative shadow-sm border-2 border-white">
+                  <Image
+                    src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=600&q=80"
+                    alt={`Property Hazard caused by ${pest.name}`}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
+                    <span className="text-[11px] font-bold text-white">Gurgaon Property Damage Risk</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Our Treatment Process (Numbered Steps) */}
+            {/* Our Treatment Process (Numbered Steps + Supporting Treatment Photo) */}
             <div className="bg-white rounded-3xl p-6 md:p-8 border border-slate-200/80 shadow-md space-y-6">
               <div className="space-y-1">
                 <div className="text-xs font-bold text-brand-green-600 uppercase tracking-wider">
@@ -136,18 +154,34 @@ export default function SinglePestPage({ params }: PestPageProps) {
                 </h3>
               </div>
 
-              <div className="space-y-6">
-                {pest.treatmentProcess.map((step) => (
-                  <div key={step.step} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-2xl bg-brand-green-500 text-white font-extrabold flex items-center justify-center text-lg flex-shrink-0 shadow-md">
-                      {step.step}
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                {/* Steps */}
+                <div className="md:col-span-8 space-y-6">
+                  {pest.treatmentProcess.map((step) => (
+                    <div key={step.step} className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-2xl bg-brand-green-500 text-white font-extrabold flex items-center justify-center text-lg flex-shrink-0 shadow-md">
+                        {step.step}
+                      </div>
+                      <div className="space-y-1">
+                        <h4 className="font-extrabold text-brand-slate text-base">{step.title}</h4>
+                        <p className="text-xs text-slate-600 leading-relaxed">{step.description}</p>
+                      </div>
                     </div>
-                    <div className="space-y-1">
-                      <h4 className="font-extrabold text-brand-slate text-base">{step.title}</h4>
-                      <p className="text-xs text-slate-600 leading-relaxed">{step.description}</p>
-                    </div>
+                  ))}
+                </div>
+
+                {/* Supporting Treatment Photo */}
+                <div className="md:col-span-4 h-64 rounded-2xl overflow-hidden relative shadow-md border-2 border-white">
+                  <Image
+                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
+                    alt={`Nexora Technician Performing ${pest.name} Treatment`}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/90 via-transparent to-transparent flex items-end p-3">
+                    <span className="text-[11px] font-bold text-white">Target Treatment Protocol</span>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>

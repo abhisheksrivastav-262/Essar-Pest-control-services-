@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
 import { QuoteForm } from '@/components/QuoteForm';
-import { ShieldCheck, Award, CheckCircle2, HeartHandshake, MapPin, Users, Target } from 'lucide-react';
+import { Award, MapPin, Users, Target, CheckCircle2 } from 'lucide-react';
 
 export const metadata = {
   title: 'About Nexora Pest Management Gurgaon | ISO & PCAI Certified',
@@ -16,21 +16,25 @@ const CERTIFICATIONS = [
   {
     title: 'ISO 9001:2015 Certified',
     badge: 'Quality Standard',
+    image: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=400&q=80',
     desc: 'Certified Quality Management System for pest control chemical handling and customer service excellence.',
   },
   {
     title: 'PCAI Active Member',
     badge: 'Association Standards',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80',
     desc: 'Member of Pest Control Association of India adhering to strict entomological ethics.',
   },
   {
     title: 'Government Licensed',
     badge: 'Municipal Authorization',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80',
     desc: 'Licensed pesticide applicator under Haryana Directorate of Agriculture & Farmers Welfare.',
   },
   {
     title: 'EPA & CIB Approved',
     badge: 'Safety First',
+    image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=400&q=80',
     desc: '100% odorless, eco-friendly chemical formulations safe for children, seniors, and indoor pets.',
   },
 ];
@@ -64,9 +68,11 @@ export default function AboutPage() {
         subtitle="Gurgaon premier ISO 9001:2015 certified pest control company dedicated to eco-friendly, odorless protection."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
         badge="Our Heritage & Licensing"
+        videoUrl="https://assets.mixkit.co/videos/preview/mixkit-team-of-workers-disinfecting-an-office-42408-large.mp4"
+        posterUrl="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80"
       />
 
-      {/* Story Section */}
+      {/* Story Section with Supporting HQ / Technician Photo */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
@@ -79,28 +85,42 @@ export default function AboutPage() {
             <p className="text-slate-600 text-base leading-relaxed">
               Founded at Sheetla Colony, Sector 5, Gurgaon, Nexora Pest Management Pvt Ltd was created to replace toxic, smelly, old-fashioned extermination methods with modern, scientific Integrated Pest Management (IPM).
             </p>
-            <p className="text-slate-600 text-sm leading-relaxed">
-              Today, our fleet of certified technicians services thousands of luxury apartments in DLF Phase 1-5, Golf Course Extension, Sohna Road, and corporate office parks in Cyber City and Udyog Vihar.
-            </p>
 
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3">
-                <div className="p-2 bg-brand-green-50 text-brand-green-500 rounded-lg">
-                  <Target className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="font-extrabold text-brand-slate text-sm">Targeted Gel</div>
-                  <div className="text-xs text-slate-500">Zero evacuation needed</div>
+            {/* Photo & Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2 items-center">
+              {/* Supporting Photo */}
+              <div className="md:col-span-5 h-48 rounded-2xl overflow-hidden relative shadow-md border-2 border-white">
+                <Image
+                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
+                  alt="Nexora HQ Field Inspection Team in Gurgaon"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
+                  <span className="text-[11px] font-bold text-white">Sheetla Colony Sector 5 HQ</span>
                 </div>
               </div>
 
-              <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3">
-                <div className="p-2 bg-brand-amber-50 text-brand-amber-500 rounded-lg">
-                  <Users className="w-5 h-5" />
+              {/* Stats / Features */}
+              <div className="md:col-span-7 space-y-3">
+                <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3">
+                  <div className="p-2 bg-brand-green-50 text-brand-green-500 rounded-lg">
+                    <Target className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-extrabold text-brand-slate text-xs">Targeted Gel Matrix</div>
+                    <div className="text-[11px] text-slate-500">Zero evacuation or dish clearing</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-extrabold text-brand-slate text-sm">Verified Staff</div>
-                  <div className="text-xs text-slate-500">100% Police checked</div>
+
+                <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3">
+                  <div className="p-2 bg-brand-amber-50 text-brand-amber-500 rounded-lg">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-extrabold text-brand-slate text-xs">Verified Local Staff</div>
+                    <div className="text-[11px] text-slate-500">100% Police & background checked</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -112,7 +132,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications & Memberships */}
+      {/* Certifications & Memberships with Badge Visual Graphics */}
       <section className="bg-slate-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
@@ -131,16 +151,23 @@ export default function AboutPage() {
             {CERTIFICATIONS.map((cert, idx) => (
               <div
                 key={idx}
-                className="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl space-y-3 text-center"
+                className="bg-slate-800/80 border border-slate-700 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between space-y-4 hover:border-brand-green-500 transition-all"
               >
-                <div className="w-12 h-12 rounded-full bg-brand-green-500/20 text-brand-amber-400 flex items-center justify-center mx-auto">
-                  <Award className="w-6 h-6" />
+                <div className="relative h-36 w-full bg-slate-800">
+                  <Image src={cert.image} alt={cert.title} fill className="object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
+                  <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-brand-green-500 text-white flex items-center justify-center shadow-md">
+                    <Award className="w-4 h-4" />
+                  </div>
                 </div>
-                <span className="text-[10px] font-extrabold uppercase text-brand-green-400 bg-brand-green-950 px-2.5 py-1 rounded-full">
-                  {cert.badge}
-                </span>
-                <h3 className="text-base font-extrabold text-white pt-1">{cert.title}</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">{cert.desc}</p>
+
+                <div className="p-6 pt-0 space-y-2 text-center flex-1">
+                  <span className="text-[10px] font-extrabold uppercase text-brand-amber-400 bg-brand-amber-950/80 border border-brand-amber-500/30 px-2.5 py-0.5 rounded-full inline-block">
+                    {cert.badge}
+                  </span>
+                  <h3 className="text-base font-extrabold text-white pt-1">{cert.title}</h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">{cert.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -177,21 +204,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Link to Careers */}
+      {/* Link to Careers with Supporting Visual */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-brand-slate to-slate-900 text-white rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800">
-          <div>
+        <div className="bg-gradient-to-r from-brand-slate to-slate-900 text-white rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800 relative overflow-hidden">
+          <div className="relative z-10 space-y-1 max-w-xl">
+            <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-brand-amber-400 uppercase tracking-wider bg-brand-amber-500/20 px-3 py-0.5 rounded-full mb-1">
+              <CheckCircle2 className="w-3.5 h-3.5" /> Hiring in Gurgaon
+            </div>
             <h3 className="text-2xl font-extrabold">Want to Join the Nexora Team?</h3>
-            <p className="text-xs text-slate-300 mt-1">
+            <p className="text-xs text-slate-300">
               We are hiring certified technicians, customer care managers, and sales representatives in Gurgaon.
             </p>
           </div>
-          <Link
-            href="/about/careers"
-            className="bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-sm py-3 px-6 rounded-xl transition-all shadow-md flex-shrink-0"
-          >
-            Explore Openings & Apply
-          </Link>
+
+          <div className="relative z-10 flex items-center gap-4">
+            <div className="hidden sm:block relative w-20 h-20 rounded-2xl overflow-hidden border-2 border-white/20 shadow-md">
+              <Image
+                src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=300&q=80"
+                alt="Nexora Technician Career Opportunity"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <Link
+              href="/about/careers"
+              className="bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-sm py-3.5 px-6 rounded-xl transition-all shadow-md flex-shrink-0"
+            >
+              Explore Openings & Apply
+            </Link>
+          </div>
         </div>
       </section>
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { CheckCircle2, Send, AlertCircle, Phone, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Send, AlertCircle, Phone, ShieldCheck, MessageSquare } from 'lucide-react';
 
 export interface QuoteFormData {
   name: string;
@@ -47,6 +47,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
   const {
     register,
     handleSubmit,
+    getValues,
     reset,
     formState: { errors },
   } = useForm<QuoteFormData>({
@@ -58,7 +59,6 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
-    // Simulate server submission API latency
     await new Promise((resolve) => setTimeout(resolve, 800));
     console.log('Nexora Quote Submitted:', data);
     setIsSubmitting(false);
@@ -67,6 +67,21 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
     if (onSuccess) {
       setTimeout(onSuccess, 3000);
     }
+  };
+
+  const handleWhatsAppSend = () => {
+    const data = getValues();
+    const name = data.name || 'Valued Customer';
+    const phone = data.phone || 'Not provided';
+    const pest = data.pestType || 'Pest Control';
+    const property = data.propertyType || 'Residential';
+    const email = data.email || 'N/A';
+    const msg = data.message || 'Immediate callback requested.';
+
+    const formattedText = `Hello Nexora Pest Management! 🛡️\nI would like to request a Free Quote & Inspection:\n\n📌 Pest Type: ${pest}\n🏠 Property Type: ${property}\n👤 Name: ${name}\n📞 Phone: ${phone}\n✉️ Email: ${email}\n📍 Address/Notes: ${msg}`;
+
+    const whatsappUrl = `https://wa.me/918368334476?text=${encodeURIComponent(formattedText)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -88,13 +103,24 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
           <p className="text-sm text-slate-600">
             Thank you! Our Gurgaon technician supervisor will call you back within <span className="font-semibold text-brand-green-500">15 minutes</span> on your phone number.
           </p>
-          <a
-            href="tel:8368334476"
-            className="inline-flex items-center justify-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white font-bold py-2.5 px-5 rounded-xl transition-all shadow-md text-sm mt-2"
-          >
-            <Phone className="w-4 h-4 fill-current" />
-            Urgent? Call 8368334476 Now
-          </a>
+
+          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+            <a
+              href="tel:8368334476"
+              className="inline-flex items-center justify-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-sm"
+            >
+              <Phone className="w-4 h-4 fill-current" />
+              <span>Call 8368334476</span>
+            </a>
+            <button
+              onClick={handleWhatsAppSend}
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-sm"
+            >
+              <MessageSquare className="w-4 h-4 fill-current" />
+              <span>Chat on WhatsApp</span>
+            </button>
+          </div>
+
           <button
             onClick={() => setIsSubmitted(false)}
             className="block text-xs text-slate-500 hover:underline mx-auto mt-3"
@@ -230,21 +256,32 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
             ></textarea>
           </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-base py-3.5 px-6 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group disabled:opacity-50"
-          >
-            {isSubmitting ? (
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-            ) : (
-              <>
-                <span>Get Instant Quote & Callback</span>
-                <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </>
-            )}
-          </button>
+          {/* Two Action Buttons: Form Callback Submit & Direct WhatsApp Button */}
+          <div className="space-y-2.5 pt-1">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-sm py-3.5 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 group disabled:opacity-50"
+            >
+              {isSubmitting ? (
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              ) : (
+                <>
+                  <span>Get Instant Callback & Quote</span>
+                  <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </>
+              )}
+            </button>
+
+            <button
+              type="button"
+              onClick={handleWhatsAppSend}
+              className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold text-sm py-3 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
+            >
+              <MessageSquare className="w-4 h-4 fill-current" />
+              <span>Send Details via WhatsApp (8368334476)</span>
+            </button>
+          </div>
 
           <p className="text-[11px] text-slate-400 text-center mt-2">
             🔒 Your privacy is 100% protected. Zero spam guarantee.

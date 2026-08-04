@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
 import { blogPosts } from '@/data/blog';
-import { Calendar, Clock, ArrowRight, User, Filter } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Filter } from 'lucide-react';
 
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -24,6 +24,8 @@ export default function BlogPage() {
         subtitle="Practical tips on termite protection, seasonal pest management, and commercial food hygiene from certified entomologists."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Blog' }]}
         badge="Expert Knowledge Base"
+        videoUrl="https://assets.mixkit.co/videos/preview/mixkit-man-working-on-his-laptop-in-an-office-42514-large.mp4"
+        posterUrl="https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=1200&q=80"
       />
 
       {/* Filter Tabs */}

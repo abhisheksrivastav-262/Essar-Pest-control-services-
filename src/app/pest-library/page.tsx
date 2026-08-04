@@ -32,6 +32,8 @@ export default function PestLibraryPage() {
         subtitle="Learn how to identify common Indian pests, recognize signs of infestation, and understand Nexora target treatment solutions."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pest Library' }]}
         badge="Complete Identification Guide"
+        videoUrl="https://assets.mixkit.co/videos/preview/mixkit-close-up-shot-of-ants-on-wood-43093-large.mp4"
+        posterUrl="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=1200&q=80"
       />
 
       {/* Filter & Search Bar */}

@@ -19,13 +19,13 @@ export const PestCard: React.FC<PestCardProps> = ({ pest }) => {
   return (
     <div className="bg-white rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col overflow-hidden group">
       {/* Photo Container */}
-      <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
+      <div className="relative h-48 w-full bg-slate-50 border-b border-slate-100 overflow-hidden flex items-center justify-center p-3">
         <Image
           src={pest.imageUrl}
           alt={`Nexora Pest Management - ${pest.name} Control in Gurgaon`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute top-3 left-3 flex gap-2">
           <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${dangerBadgeColor}`}>

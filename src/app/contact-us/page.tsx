@@ -86,10 +86,13 @@ export default function ContactUsPage() {
                 </div>
                 <div className="space-y-1">
                   <div className="text-[11px] font-extrabold uppercase text-slate-400">
-                    Corporate Office Address
+                    Corporate Office Address & Registration
                   </div>
                   <div className="text-sm font-bold text-brand-slate leading-snug">
                     Sheetla Colony, Sector 5, Block A, Gurgaon, Haryana 122001
+                  </div>
+                  <div className="text-xs font-semibold text-slate-500">
+                    CIN: U46692HR2026PTC147850
                   </div>
                   <a
                     href="https://maps.google.com/?q=Sheetla+Colony+Sector+5+Gurgaon"

@@ -301,37 +301,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. TECHNICIAN SPOTLIGHT */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl border border-slate-200/80 shadow-xl overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-12">
-            <div className="lg:col-span-5 relative h-72 lg:h-auto bg-slate-100">
-              <Image
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
-                alt="Vikram Singh Senior Supervisor Nexora Pest Management"
-                fill
-                className="object-cover object-top"
-              />
-            </div>
-            <div className="lg:col-span-7 p-8 md:p-12 space-y-5 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-brand-amber-600 bg-brand-amber-50 px-3 py-1 rounded-full w-max">
-                <CheckCircle2 className="w-4 h-4" /> Technician Spotlight
-              </div>
-
-              <blockquote className="text-lg md:text-xl font-medium text-slate-800 italic leading-relaxed">
-                &ldquo;At Nexora, we treat every home in Gurgaon as if it were our own family&apos;s residence. We don&apos;t just spray chemical solution — we locate the subterranean nest queen and guarantee 100% long-term protection.&rdquo;
-              </blockquote>
-
-              <div>
-                <div className="font-extrabold text-brand-slate text-base">Vikram Singh</div>
-                <div className="text-xs text-brand-green-600 font-semibold">
-                  Head of Technical Operations & Senior Entomologist (8+ Years Service in Gurgaon)
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 6. CUSTOMER REVIEWS CAROUSEL */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

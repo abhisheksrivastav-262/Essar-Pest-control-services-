@@ -82,7 +82,7 @@ export default function AboutPage() {
               Protecting NCR Homes & Businesses with Science & Care
             </h2>
             <p className="text-slate-600 text-base leading-relaxed">
-              Founded at Sheetla Colony, Sector 5, Gurgaon, Nexora Pest Management Pvt Ltd was created to replace toxic, smelly, old-fashioned extermination methods with modern, scientific Integrated Pest Management (IPM).
+              Founded at Sheetla Colony, Sector 5, Gurgaon, Nexora Pest Management Pvt Ltd (CIN: U46692HR2026PTC147850) was created to replace toxic, smelly, old-fashioned extermination methods with modern, scientific Integrated Pest Management (IPM).
             </p>
 
             {/* Photo & Stats Grid */}

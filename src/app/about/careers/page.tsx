@@ -1,11 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import Image from 'next/image';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
-import { openPositions } from '@/data/careers';
-import { MapPin, DollarSign, ChevronDown, CheckCircle2, Send, UploadCloud, AlertCircle } from 'lucide-react';
+import { openPositions, JobPosition } from '@/data/careers';
+import { Briefcase, MapPin, DollarSign, ChevronDown, CheckCircle2, Send, UploadCloud, AlertCircle } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 
 interface ApplicationFormData {
@@ -61,11 +60,9 @@ export default function CareersPage() {
           { label: 'Careers' },
         ]}
         badge="Gurgaon HQ Hiring"
-        videoUrl="https://assets.mixkit.co/videos/preview/mixkit-people-in-protective-suits-spraying-disinfectant-42410-large.mp4"
-        posterUrl="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=1200&q=80"
       />
 
-      {/* Culture & Benefits with Real Stock Photos */}
+      {/* Culture & Benefits */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center max-w-3xl mx-auto space-y-2">
           <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">
@@ -80,92 +77,47 @@ export default function CareersPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between">
-            <div className="relative h-44 w-full bg-slate-100">
-              <Image
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
-                alt="Competitive Compensation & Career Growth at Nexora"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-xs font-extrabold text-white">💰 High Monthly Earnings</span>
-              </div>
+          <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center font-bold">
+              💰
             </div>
-            <div className="p-6 space-y-2 flex-1">
-              <h3 className="font-extrabold text-brand-slate text-base">Competitive Compensation</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Above-market salary packages, monthly performance bonuses, petrol allowances, and annual appraisal cycles.
-              </p>
-            </div>
+            <h3 className="font-extrabold text-brand-slate text-base">Competitive Compensation</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Above-market salary packages, monthly performance bonuses, petrol allowances, and annual appraisal cycles.
+            </p>
           </div>
 
-          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between">
-            <div className="relative h-44 w-full bg-slate-100">
-              <Image
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
-                alt="PCAI Entomological Training Certification"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-xs font-extrabold text-white">🎓 Certified Field Training</span>
-              </div>
+          <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-brand-amber-50 text-brand-amber-500 flex items-center justify-center font-bold">
+              🎓
             </div>
-            <div className="p-6 space-y-2 flex-1">
-              <h3 className="font-extrabold text-brand-slate text-base">PCAI Entomological Training</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Receive formal certification in chemical handling safety, IPM procedures, and subterranean termite barriering.
-              </p>
-            </div>
+            <h3 className="font-extrabold text-brand-slate text-base">PCAI Entomological Training</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Receive formal certification in chemical handling safety, IPM procedures, and subterranean termite barriering.
+            </p>
           </div>
 
-          <div className="bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden flex flex-col justify-between">
-            <div className="relative h-44 w-full bg-slate-100">
-              <Image
-                src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80"
-                alt="Health Insurance & PPE Gear for Technicians"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-xs font-extrabold text-white">🛡️ Health & PPE Protection</span>
-              </div>
+          <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-card space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-brand-green-50 text-brand-green-500 flex items-center justify-center font-bold">
+              🛡️
             </div>
-            <div className="p-6 space-y-2 flex-1">
-              <h3 className="font-extrabold text-brand-slate text-base">Health Insurance & PPE</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Full medical insurance coverage for technicians and family, plus state-of-the-art protective gear.
-              </p>
-            </div>
+            <h3 className="font-extrabold text-brand-slate text-base">Health Insurance & PPE</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              Full medical insurance coverage for technicians and family, plus state-of-the-art protective gear.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Open Positions Section with Header Visual Banner */}
+      {/* Open Positions Accordion */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        {/* Visual Header Banner for Open Positions */}
-        <div className="relative rounded-3xl overflow-hidden shadow-md bg-brand-slate p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 border border-slate-800">
-          <div className="relative z-10 max-w-xl space-y-2 text-center md:text-left">
-            <div className="text-xs font-bold text-brand-amber-400 uppercase tracking-widest">
-              Current Gurgaon Vacancies
-            </div>
-            <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-              Open Positions ({openPositions.length})
-            </h2>
-            <p className="text-xs text-slate-300">
-              Select an open role below to view full responsibilities and submit your application directly to our HR team.
-            </p>
+        <div className="text-center max-w-3xl mx-auto space-y-2">
+          <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">
+            Current Gurgaon Vacancies
           </div>
-
-          <div className="relative z-10 w-full md:w-64 h-32 rounded-2xl overflow-hidden border-2 border-white/20 shadow-md">
-            <Image
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
-              alt="Nexora Field Specialist at Work in Gurgaon"
-              fill
-              className="object-cover"
-            />
-          </div>
+          <h2 className="text-3xl font-extrabold text-brand-slate tracking-tight">
+            Open Positions ({openPositions.length})
+          </h2>
         </div>
 
         <div className="space-y-4">
@@ -178,7 +130,7 @@ export default function CareersPage() {
                   isExpanded ? 'border-brand-green-500 shadow-xl' : 'border-slate-200/80 shadow-sm'
                 }`}
               >
-                {/* Header */}
+                {/* Header Header */}
                 <div
                   onClick={() => toggleExpand(job.id, job.title)}
                   className="p-6 cursor-pointer flex flex-col md:flex-row items-start md:items-center justify-between gap-4 select-none hover:bg-slate-50/50"
@@ -362,7 +314,7 @@ export default function CareersPage() {
                 </div>
               </div>
 
-              {/* Resume File Upload Box */}
+              {/* Fake Resume File Upload Box */}
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase mb-1">
                   Upload Resume / CV (PDF or DOCX)

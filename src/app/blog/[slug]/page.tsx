@@ -6,7 +6,7 @@ import { PageHero } from '@/components/PageHero';
 import { QuoteForm } from '@/components/QuoteForm';
 import { CTABanner } from '@/components/CTABanner';
 import { blogPosts } from '@/data/blog';
-import { Calendar, Clock, CheckCircle2 } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 interface BlogPostProps {
   params: {
@@ -39,12 +39,6 @@ export default function SingleBlogPostPage({ params }: BlogPostProps) {
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
 
-  // Supporting images for inline article placement
-  const inlineImages = [
-    'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=800&q=80',
-  ];
-
   return (
     <div className="space-y-16 pb-12">
       <PageHero
@@ -56,7 +50,6 @@ export default function SingleBlogPostPage({ params }: BlogPostProps) {
           { label: post.title.slice(0, 30) + '...' },
         ]}
         badge={post.category}
-        posterUrl={post.imageUrl}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
@@ -98,44 +91,25 @@ export default function SingleBlogPostPage({ params }: BlogPostProps) {
                 {post.content.intro}
               </p>
 
-              {/* Dynamic Body Sections with Inline Supporting Images */}
+              {/* Dynamic Body Sections */}
               {post.content.sections.map((sec, idx) => (
-                <React.Fragment key={idx}>
-                  <div className="space-y-3 pt-2">
-                    <h3 className="text-xl font-extrabold text-brand-slate tracking-tight">
-                      {sec.heading}
-                    </h3>
-                    <p className="text-slate-600 leading-relaxed">{sec.body}</p>
+                <div key={idx} className="space-y-3 pt-2">
+                  <h3 className="text-xl font-extrabold text-brand-slate tracking-tight">
+                    {sec.heading}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed">{sec.body}</p>
 
-                    {sec.bulletPoints && (
-                      <ul className="space-y-2 pt-1 pl-2">
-                        {sec.bulletPoints.map((bp, bIdx) => (
-                          <li key={bIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                            <CheckCircle2 className="w-4 h-4 text-brand-green-500 flex-shrink-0 mt-0.5" />
-                            <span>{bp}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-
-                  {/* Inline Supporting Article Image after section 1 and section 2 */}
-                  {idx < inlineImages.length && (
-                    <div className="relative h-64 w-full rounded-2xl overflow-hidden shadow-sm my-6 border border-slate-200">
-                      <Image
-                        src={inlineImages[idx]}
-                        alt={`Supporting visual for ${sec.heading}`}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent flex items-end p-3">
-                        <span className="text-[11px] font-semibold text-white">
-                          Nexora Technical Field Servicing in Gurgaon
-                        </span>
-                      </div>
-                    </div>
+                  {sec.bulletPoints && (
+                    <ul className="space-y-2 pt-1 pl-2">
+                      {sec.bulletPoints.map((bp, bIdx) => (
+                        <li key={bIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
+                          <CheckCircle2 className="w-4 h-4 text-brand-green-500 flex-shrink-0 mt-0.5" />
+                          <span>{bp}</span>
+                        </li>
+                      ))}
+                    </ul>
                   )}
-                </React.Fragment>
+                </div>
               ))}
 
               {/* Conclusion Box */}
@@ -146,7 +120,7 @@ export default function SingleBlogPostPage({ params }: BlogPostProps) {
             </div>
           </div>
 
-          {/* Sidebar */}
+          {/* Sidebar Sidebar */}
           <div className="lg:col-span-4 sticky top-24 space-y-8">
             <QuoteForm title="Need Professional Help?" subtitle="Book instant inspection in Gurgaon" compact />
 

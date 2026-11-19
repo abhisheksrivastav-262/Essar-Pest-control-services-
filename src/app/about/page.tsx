@@ -2,60 +2,38 @@ import React from 'react';
 import Image from 'next/image';
 import { PageHero } from '@/components/PageHero';
 import { CTABanner } from '@/components/CTABanner';
-import { QuoteForm } from '@/components/QuoteForm';
-import { Award, MapPin, Users, Target } from 'lucide-react';
+import { Award, MapPin, Users, Target, Phone, MessageSquare } from 'lucide-react';
 
 export const metadata = {
-  title: 'About Nexora Pest Management Gurgaon | ISO & PCAI Certified',
+  title: "About Sangle's Pest Control & Service | Quality & Safety Standards",
   description:
-    'Learn about Nexora Pest Management Pvt Ltd story, mission, ISO 9001:2015 certifications, PCAI membership, and Gurgaon leadership team.',
+    "Learn about Sangle's Pest Control & Service story, mission, and professional pest management for Commercial, Industrial, Home, Society & Warehouse. Located at Majasgaon, Jogeshwari East 400060.",
 };
 
 const CERTIFICATIONS = [
   {
-    title: 'ISO 9001:2015 Certified',
+    title: 'Certified Safety Standard',
     badge: 'Quality Standard',
     image: 'https://images.unsplash.com/photo-1563298723-dcfebaa392e3?auto=format&fit=crop&w=400&q=80',
-    desc: 'Certified Quality Management System for pest control chemical handling and customer service excellence.',
+    desc: 'Adherence to proven management systems for safe pest control chemical handling and customer service excellence.',
   },
   {
-    title: 'PCAI Active Member',
-    badge: 'Association Standards',
+    title: 'Professional Service Ethic',
+    badge: 'Industry Standards',
     image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=400&q=80',
-    desc: 'Member of Pest Control Association of India adhering to strict entomological ethics.',
+    desc: 'Committed to strict ethical pest control practices, environmental responsibility, and structural preservation.',
   },
   {
-    title: 'Government Licensed',
-    badge: 'Municipal Authorization',
+    title: 'Government Approved Methods',
+    badge: 'Certified Application',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80',
-    desc: 'Licensed pesticide applicator under Haryana Directorate of Agriculture & Farmers Welfare.',
+    desc: 'Authorized application of certified pest formulations ensuring legal safety and audit compliance.',
   },
   {
-    title: 'EPA & CIB Approved',
+    title: 'Safe & Odorless Formulations',
     badge: 'Safety First',
     image: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=400&q=80',
     desc: '100% odorless, eco-friendly chemical formulations safe for children, seniors, and indoor pets.',
-  },
-];
-
-const TEAM = [
-  {
-    name: 'Vikram Singh',
-    role: 'Head of Technical Operations',
-    img: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
-    bio: '8+ years leading field entomology and subterranean termite barrier engineering in Gurgaon high-rises.',
-  },
-  {
-    name: 'Dr. Anita Sharma',
-    role: 'Senior Entomologist & Technical Advisor',
-    img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
-    bio: 'M.Sc. Entomology specialist designing zero-odor cockroach gel matrices and larvicidal mist protocols.',
-  },
-  {
-    name: 'Rajesh Kumar',
-    role: 'Commercial Audit Readiness Lead',
-    img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
-    bio: 'Specialist in FSSAI and HACCP compliance auditing for Cyber Hub restaurants and corporate cafeterias.',
   },
 ];
 
@@ -63,10 +41,10 @@ export default function AboutPage() {
   return (
     <div className="space-y-16 pb-12">
       <PageHero
-        title="About Nexora Pest Management Pvt Ltd"
-        subtitle="Gurgaon premier ISO 9001:2015 certified pest control company dedicated to eco-friendly, odorless protection."
+        title="About Sangle's Pest Control & Service"
+        subtitle="Dedicated to eco-friendly, odorless protection for Commercial, Industrial, Home, Society & Warehouse properties."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About Us' }]}
-        badge="Our Heritage & Licensing"
+        badge="Our Heritage & Standards"
         videoUrl="https://assets.mixkit.co/videos/preview/mixkit-team-of-workers-disinfecting-an-office-42408-large.mp4"
         posterUrl="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80"
       />
@@ -76,13 +54,16 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 text-xs font-bold text-brand-green-600 bg-brand-green-50 px-3 py-1 rounded-full">
-              <MapPin className="w-4 h-4" /> Rooted in Gurgaon, Haryana
+              <MapPin className="w-4 h-4" /> Jogeshwari East, Mumbai
             </div>
             <h2 className="text-3xl font-extrabold text-brand-slate tracking-tight">
-              Protecting NCR Homes & Businesses with Science & Care
+              Protecting Properties with Science, Care & Dedication
             </h2>
             <p className="text-slate-600 text-base leading-relaxed">
-              Founded at Sheetla Colony, Sector 5, Gurgaon, Nexora Pest Management Pvt Ltd (CIN: U46692HR2026PTC147850) was created to replace toxic, smelly, old-fashioned extermination methods with modern, scientific Integrated Pest Management (IPM).
+              Based at Office No 2 Laxuman Parb chawl, opposite Bandivali School, Majasgaon, Jogeshwari East 400060, Sangle&apos;s Pest Control & Service was created to replace toxic, smelly, old-fashioned extermination methods with modern, scientific Integrated Pest Management (IPM).
+            </p>
+            <p className="text-slate-600 text-base leading-relaxed">
+              We specialize in pest management for <strong>Commercial</strong> establishments, <strong>Industrial</strong> facilities, <strong>Home</strong> residences, <strong>Housing Societies</strong>, and large <strong>Warehouses</strong>.
             </p>
 
             {/* Photo & Stats Grid */}
@@ -91,12 +72,12 @@ export default function AboutPage() {
               <div className="md:col-span-5 h-48 rounded-2xl overflow-hidden relative shadow-md border-2 border-white">
                 <Image
                   src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
-                  alt="Nexora HQ Field Inspection Team in Gurgaon"
+                  alt="Sangle's Field Inspection Team"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-3">
-                  <span className="text-[11px] font-bold text-white">Sheetla Colony Sector 5 HQ</span>
+                  <span className="text-[11px] font-bold text-white">Jogeshwari East Office</span>
                 </div>
               </div>
 
@@ -118,88 +99,113 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <div className="font-extrabold text-brand-slate text-xs">Verified Local Staff</div>
-                    <div className="text-[11px] text-slate-500">100% Police & background checked</div>
+                    <div className="text-[11px] text-slate-500">Police-verified trained technicians</div>
+                  </div>
+                </div>
+
+                <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center gap-3">
+                  <div className="p-2 bg-brand-green-50 text-brand-green-500 rounded-lg">
+                    <Award className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-extrabold text-brand-slate text-xs">Full Spectrum Coverage</div>
+                    <div className="text-[11px] text-slate-500">Commercial / Industrial / Home / Society / Warehouse</div>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* Contact quick strip */}
+            <div className="pt-2 flex flex-wrap gap-4 items-center">
+              <a
+                href="tel:8286007801"
+                className="inline-flex items-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white font-bold text-sm px-5 py-2.5 rounded-xl transition-all shadow-md"
+              >
+                <Phone className="w-4 h-4 fill-current" />
+                <span>Call Helpline: 8286007801</span>
+              </a>
+
+              <a
+                href="https://wa.me/918286007801"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-sm px-5 py-2.5 rounded-xl transition-all shadow-md"
+              >
+                <MessageSquare className="w-4 h-4 fill-current" />
+                <span>WhatsApp: 8286007801</span>
+              </a>
+            </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <QuoteForm title="Connect with Our Team" subtitle="Book an inspection or ask a question" />
+          {/* Right Supporting Collage */}
+          <div className="lg:col-span-5 space-y-4">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-72">
+              <Image
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+                alt="Sangle's Senior Pest Control Specialist"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-5">
+                <div className="text-white">
+                  <div className="font-extrabold text-base">Expert Entomological Methods</div>
+                  <div className="text-xs text-slate-300">Precision chemical calculation & safe baiting</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-brand-slate text-white p-6 rounded-2xl border border-slate-800 space-y-2">
+              <div className="text-xs text-brand-amber-400 font-bold uppercase tracking-wider">
+                Our Corporate Promise
+              </div>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                We believe that modern pest management should never compromise the health of your family, your pets, or your customers. We back every service with a written satisfaction guarantee.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Certifications & Memberships with Badge Visual Graphics */}
-      <section className="bg-slate-900 text-white py-16">
+      {/* Certifications & Industry Standards Grid */}
+      <section className="bg-slate-50 border-y border-slate-200/80 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="text-xs font-bold text-brand-amber-400 uppercase tracking-widest">
-              Industry Credentials
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">
+              Industry Compliance
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-              Certifications & Regulatory Licensing
+            <h2 className="text-3xl font-extrabold text-brand-slate tracking-tight">
+              Our Safety Standards & Protocols
             </h2>
-            <p className="text-slate-400 text-sm">
-              We operate under strict government and technical safety protocols.
+            <p className="text-slate-600 text-sm">
+              We operate strictly under government-approved pest control guidelines and safety standards.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {CERTIFICATIONS.map((cert, idx) => (
               <div
                 key={idx}
-                className="bg-slate-800/80 border border-slate-700 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between space-y-4 hover:border-brand-green-500 transition-all"
+                className="bg-white rounded-2xl border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all overflow-hidden flex flex-col"
               >
-                <div className="relative h-36 w-full bg-slate-800">
+                <div className="relative h-36 w-full bg-slate-100">
                   <Image src={cert.image} alt={cert.title} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent" />
-                  <div className="absolute top-3 left-3 w-8 h-8 rounded-full bg-brand-green-500 text-white flex items-center justify-center shadow-md">
-                    <Award className="w-4 h-4" />
+                  <div className="absolute inset-0 bg-brand-slate/20" />
+                  <div className="absolute top-2.5 left-2.5">
+                    <span className="text-[10px] font-bold bg-white text-brand-slate px-2.5 py-0.5 rounded-full shadow-sm">
+                      {cert.badge}
+                    </span>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0 space-y-2 text-center flex-1">
-                  <span className="text-[10px] font-extrabold uppercase text-brand-amber-400 bg-brand-amber-950/80 border border-brand-amber-500/30 px-2.5 py-0.5 rounded-full inline-block">
-                    {cert.badge}
-                  </span>
-                  <h3 className="text-base font-extrabold text-white pt-1">{cert.title}</h3>
-                  <p className="text-xs text-slate-300 leading-relaxed">{cert.desc}</p>
+                <div className="p-4 flex-1 flex flex-col justify-between space-y-2">
+                  <div>
+                    <h3 className="font-extrabold text-brand-slate text-sm">{cert.title}</h3>
+                    <p className="text-xs text-slate-600 leading-relaxed mt-1">{cert.desc}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Team Intro Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        <div className="text-center max-w-3xl mx-auto space-y-2">
-          <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">
-            Leadership & Technical Staff
-          </div>
-          <h2 className="text-3xl font-extrabold text-brand-slate tracking-tight">
-            Meet the Nexora Experts
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {TEAM.map((member, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-3xl border border-slate-200/80 shadow-card overflow-hidden text-center space-y-4 p-6"
-            >
-              <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-brand-green-50 shadow-md">
-                <Image src={member.img} alt={member.name} fill className="object-cover" />
-              </div>
-              <div>
-                <h3 className="text-lg font-extrabold text-brand-slate">{member.name}</h3>
-                <div className="text-xs text-brand-green-600 font-bold mt-0.5">{member.role}</div>
-              </div>
-              <p className="text-xs text-slate-500 leading-relaxed">{member.bio}</p>
-            </div>
-          ))}
         </div>
       </section>
 

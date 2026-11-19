@@ -16,9 +16,9 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Commercial Pest Control Gurgaon | FSSAI & HACCP Compliant Hygiene',
+  title: "Commercial & Industrial Pest Control | Sangle's Pest Control & Service",
   description:
-    'Commercial Integrated Pest Management (IPM) for Gurgaon restaurants, Cyber City office parks, hotels, cloud kitchens, and warehouses. Discite night-shift servicing & audit logs.',
+    "Commercial & Industrial Integrated Pest Management (IPM) for restaurants, office parks, factories, societies, and warehouses. Night-shift servicing & audit logs. Call 8286007801.",
 };
 
 const INDUSTRIES = [
@@ -83,7 +83,7 @@ export default function CommercialServicesPage() {
               Zero-Tolerance Pest Compliance for Businesses
             </h2>
             <p className="text-slate-600 text-base leading-relaxed">
-              A single pest sighting in a commercial establishment can ruin customer trust, cause audit failures, and endanger operating licenses. Nexora Commercial Services provides custom Integrated Pest Management (IPM) contracts tailored to your operational schedule.
+              A single pest sighting in a commercial establishment can ruin customer trust, cause audit failures, and endanger operating licenses. Sangle&apos;s Commercial Services provides custom Integrated Pest Management (IPM) contracts tailored to your operational schedule.
             </p>
 
             {/* Photo + Features Layout */}
@@ -156,10 +156,10 @@ export default function CommercialServicesPage() {
               Tailored B2B Expertise
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
-              Industries We Protect in Gurgaon & NCR
+              Industries We Protect
             </h2>
             <p className="text-slate-400 text-sm">
-              Over 200+ commercial clients trust Nexora for monthly pest management compliance.
+              Over 200+ commercial clients trust Sangle&apos;s for pest management and hygiene compliance.
             </p>
           </div>
 
@@ -194,7 +194,7 @@ export default function CommercialServicesPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <CTABanner
           title="Need Immediate Commercial Audit Readiness?"
-          subtitle="Speak with our Senior Commercial Technical Officer at 8368334476 for a free site audit."
+          subtitle="Speak with our Senior Commercial Technical Officer at 8286007801 for a free site audit."
           badge="Enterprise Hotline"
         />
       </section>

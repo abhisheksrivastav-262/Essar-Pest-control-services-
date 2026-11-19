@@ -40,7 +40,7 @@ const PEST_OPTIONS = [
 
 export const QuoteForm: React.FC<QuoteFormProps> = ({
   title = 'Request a Free Quote',
-  subtitle = 'Same-day service available across Gurgaon & NCR',
+  subtitle = 'Same-day service available • Commercial / Industrial / Home / Society / Warehouse',
   compact = false,
   onSuccess,
 }) => {
@@ -56,7 +56,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
   } = useForm<QuoteFormData>({
     defaultValues: {
       pestType: 'Subterranean Termites (Deemak)',
-      propertyType: 'Residential Apartment',
+      propertyType: 'Home / Residential Flat',
     },
   });
 
@@ -66,18 +66,18 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
     const email = data.email || 'N/A';
     const service = data.pestType || 'Pest Control';
     const property = data.propertyType || 'Residential';
-    const location = data.message || 'Gurgaon NCR';
+    const location = data.message || 'Jogeshwari East / Mumbai';
 
-    const formattedMessage = `🛡️ New Website Lead - Nexora Pest Management\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${service}\nProperty: ${property}\nLocation / Notes:\n${location}\n\nSource:\nWebsite Form Submission`;
+    const formattedMessage = `🛡️ New Website Lead - Sangle's Pest Control & Service\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nService: ${service}\nProperty: ${property}\nLocation / Notes:\n${location}\n\nSource:\nWebsite Form Submission`;
 
-    const whatsappUrl = `https://wa.me/918368334476?text=${encodeURIComponent(formattedMessage)}`;
+    const whatsappUrl = `https://wa.me/918286007801?text=${encodeURIComponent(formattedMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const onSubmit = async (data: QuoteFormData) => {
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 600));
-    console.log('Nexora Quote Lead Received:', data);
+    console.log("Sangle's Quote Lead Received:", data);
     sendToWhatsApp(data);
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -92,8 +92,8 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
     if (data.name && data.phone) {
       sendToWhatsApp(data);
     } else {
-      const defaultMessage = `🛡️ New Website Lead - Nexora Pest Management\n\nRequesting immediate callback & quote for pest control in Gurgaon.\nCall Helpline: 8368334476\n\nSource: Website Quick Chat`;
-      window.open(`https://wa.me/918368334476?text=${encodeURIComponent(defaultMessage)}`, '_blank');
+      const defaultMessage = `🛡️ New Website Lead - Sangle's Pest Control & Service\n\nRequesting immediate callback & quote for pest control service.\nCall Helpline: 8286007801\n\nSource: Website Quick Chat`;
+      window.open(`https://wa.me/918286007801?text=${encodeURIComponent(defaultMessage)}`, '_blank');
     }
   };
 
@@ -114,16 +114,16 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
           <CheckCircle2 className="w-12 h-12 text-brand-green-500 mx-auto" />
           <h4 className="text-lg font-bold text-brand-slate">Quote Request Delivered!</h4>
           <p className="text-sm text-slate-600">
-            Thank you! Your quote request has been sent to our Gurgaon dispatch team via WhatsApp. We will call you back within <span className="font-semibold text-brand-green-500">15 minutes</span>.
+            Thank you! Your quote request has been sent to Sangle&apos;s dispatch team via WhatsApp. We will call you back within <span className="font-semibold text-brand-green-500">15 minutes</span>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <a
-              href="tel:8368334476"
+              href="tel:8286007801"
               className="inline-flex items-center justify-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white font-bold py-2.5 px-4 rounded-xl transition-all shadow-md text-sm"
             >
               <Phone className="w-4 h-4 fill-current" />
-              <span>Call 8368334476</span>
+              <span>Call 8286007801</span>
             </a>
             <button
               onClick={handleDirectWhatsAppClick}
@@ -169,17 +169,17 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
             {/* Property Type */}
             <div>
               <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                Property Type <span className="text-red-500">*</span>
+                Property Type (Commercial / Ind. / Home / Society / Warehouse) <span className="text-red-500">*</span>
               </label>
               <select
                 {...register('propertyType', { required: 'Select property type' })}
                 className="w-full text-sm bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-green-500 focus:bg-white transition-all"
               >
-                <option value="Residential Apartment">Residential Apartment / Flat</option>
-                <option value="Independent Villa / House">Independent Villa / House</option>
-                <option value="Commercial Office">Commercial Office Park</option>
-                <option value="Restaurant / Cloud Kitchen">Restaurant / Cafe / Food Service</option>
-                <option value="Industrial Warehouse / Plant">Industrial Warehouse / Plant</option>
+                <option value="Home / Residential Flat">Home / Residential Apartment / Flat</option>
+                <option value="Society / Housing Society">Society / Housing Society / Residential Complex</option>
+                <option value="Commercial Office / Retail">Commercial Office / Retail / Restaurant</option>
+                <option value="Industrial Plant / Factory">Industrial Plant / Factory / Manufacturing</option>
+                <option value="Warehouse / Storage Godown">Warehouse / Storage Godown</option>
               </select>
             </div>
           </div>
@@ -206,7 +206,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
             {/* Mobile Phone */}
             <div>
               <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-                Phone Number (Gurgaon/NCR) <span className="text-red-500">*</span>
+                Contact Phone / WhatsApp <span className="text-red-500">*</span>
               </label>
               <div className="relative">
                 <span className="absolute left-3.5 top-2.5 text-sm font-semibold text-slate-400">
@@ -214,7 +214,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
                 </span>
                 <input
                   type="tel"
-                  placeholder="83683 34476"
+                  placeholder="82860 07801"
                   {...register('phone', {
                     required: 'Phone number is required',
                     pattern: {
@@ -263,7 +263,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
             </label>
             <textarea
               rows={compact ? 2 : 3}
-              placeholder="Mention your sector/area in Gurgaon (e.g. DLF Phase 5, Sector 56)..."
+              placeholder="Mention your address/location (e.g. Jogeshwari East, Andheri, Goregaon)..."
               {...register('message')}
               className="w-full text-sm bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-green-500 focus:bg-white transition-all resize-none"
             ></textarea>
@@ -292,7 +292,7 @@ export const QuoteForm: React.FC<QuoteFormProps> = ({
               className="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold text-sm py-3 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 fill-current" />
-              <span>Send via WhatsApp Directly (8368334476)</span>
+              <span>Send via WhatsApp Directly (8286007801)</span>
             </button>
           </div>
 

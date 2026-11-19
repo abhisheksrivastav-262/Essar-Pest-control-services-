@@ -13,14 +13,14 @@ interface CTABannerProps {
 }
 
 export const CTABanner: React.FC<CTABannerProps> = ({
-  title = 'Special Monsoon Offer: 30% Off Home Pest Shield',
-  subtitle = 'Book your hassle-free inspection today. 100% money-back guarantee & zero toxic fumes.',
-  badge = 'Limited-Time Gurgaon Discount',
+  title = 'Special Offer: 30% Off Total Pest Shield',
+  subtitle = 'Book your hassle-free inspection today. 100% satisfaction guarantee & odorless safe formulations.',
+  badge = 'Limited-Time Discount',
   bgImageUrl = 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1200&q=80',
 }) => {
   const openWhatsApp = () => {
-    const formattedMessage = `🛡️ New Website Lead - Nexora Pest Management\n\nI want to claim the Special Monsoon Offer: 30% Off Home Pest Shield in Gurgaon.\nPhone Helpline: 8368334476\n\nSource:\nWebsite Offer Banner`;
-    window.open(`https://wa.me/918368334476?text=${encodeURIComponent(formattedMessage)}`, '_blank');
+    const formattedMessage = `🛡️ New Website Lead - Sangle's Pest Control & Service\n\nI want to claim the Special Offer: 30% Off Total Pest Shield.\nPhone Helpline: 8286007801\n\nSource:\nWebsite Offer Banner`;
+    window.open(`https://wa.me/918286007801?text=${encodeURIComponent(formattedMessage)}`, '_blank');
   };
 
   return (
@@ -29,7 +29,7 @@ export const CTABanner: React.FC<CTABannerProps> = ({
       <div className="absolute inset-0 z-0">
         <Image
           src={bgImageUrl}
-          alt="Nexora Pest Control Service"
+          alt="Sangle's Pest Control & Service"
           fill
           className="object-cover object-center"
         />
@@ -55,11 +55,11 @@ export const CTABanner: React.FC<CTABannerProps> = ({
 
         <div className="flex flex-col sm:flex-row items-center gap-3 flex-shrink-0 w-full lg:w-auto">
           <a
-            href="tel:8368334476"
+            href="tel:8286007801"
             className="w-full sm:w-auto bg-white hover:bg-slate-100 text-brand-slate font-black text-sm py-3.5 px-5 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2"
           >
             <Phone className="w-4 h-4 text-brand-green-500 fill-current animate-pulse" />
-            <span>Call 8368334476</span>
+            <span>Call 8286007801</span>
           </a>
 
           <button
@@ -72,10 +72,10 @@ export const CTABanner: React.FC<CTABannerProps> = ({
 
           <Link
             href="/contact-us"
-            className="w-full sm:w-auto bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-sm py-3.5 px-5 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2 group"
+            className="w-full sm:w-auto bg-brand-green-500/30 hover:bg-brand-green-500/50 text-white border border-brand-green-400 font-bold text-sm py-3.5 px-5 rounded-2xl transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
           >
-            <span>Book Quote</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <span>Book Inspection</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

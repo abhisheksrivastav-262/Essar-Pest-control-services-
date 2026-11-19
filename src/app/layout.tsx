@@ -8,29 +8,30 @@ import { FloatingQuoteButton } from '@/components/FloatingQuoteButton';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Nexora Pest Management Pvt Ltd | Gurgaon Pest Control Services',
-    template: '%s | Nexora Pest Management Gurgaon',
+    default: "Sangle's Pest Control & Service | Commercial, Industrial, Home, Society & Warehouse",
+    template: "%s | Sangle's Pest Control & Service",
   },
   description:
-    'Nexora Pest Management Pvt Ltd is Gurgaon premier ISO 9001:2015 certified pest control company. Safe, odorless anti-termite, cockroach gel, bed bug heat treatment, and mosquito control for residential and commercial properties in Gurgaon and NCR. Call 8368334476.',
+    "Sangle's Pest Control & Service provides safe, odorless, and government-approved pest control services for Commercial, Industrial, Home, Society & Warehouse. Located at Majasgaon, Jogeshwari East 400060. Call / WhatsApp 8286007801.",
   keywords: [
-    'Pest Control Gurgaon',
-    'Termite Treatment Gurgaon',
-    'Cockroach Gel Pest Control Gurgaon',
-    'Bed Bug Control Gurgaon',
-    'Commercial Pest Control Gurgaon',
-    'Nexora Pest Management Pvt Ltd',
-    'Sheetla Colony Pest Control',
-    'Sector 5 Gurgaon Pest Control',
+    "Sangle's Pest Control & Service",
+    'Pest Control Services',
+    'Commercial Pest Control',
+    'Industrial Pest Control',
+    'Home Pest Control',
+    'Society Pest Control',
+    'Warehouse Pest Control',
+    'Jogeshwari East Pest Control',
+    'Termite Treatment',
+    'Cockroach Control',
+    'Bed Bug Treatment',
   ],
-  authors: [{ name: 'Nexora Pest Management Pvt Ltd' }],
-  metadataBase: new URL('https://nexorapest.online'),
+  authors: [{ name: "Sangle's Pest Control & Service" }],
   openGraph: {
-    title: 'Nexora Pest Management Pvt Ltd | Best Pest Control in Gurgaon',
+    title: "Sangle's Pest Control & Service | Best Pest Control Solutions",
     description:
-      'ISO 9001:2015 Certified Pest Management in Gurgaon & Delhi NCR. 24/7 Same-Day Service. Call 8368334476.',
-    url: 'https://nexorapest.online',
-    siteName: 'Nexora Pest Management',
+      'Pest Control Services: Commercial, Industrial, Home, Society & Warehouse. 24/7 Same-Day Service. Call or WhatsApp 8286007801.',
+    siteName: "Sangle's Pest Control & Service",
     locale: 'en_IN',
     type: 'website',
   },
@@ -53,4 +54,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-};
+}

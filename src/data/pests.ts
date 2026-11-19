@@ -59,7 +59,7 @@ export const pestsData: Pest[] = [
       {
         step: 3,
         title: 'Follow-up & Guarantee Audit',
-        description: 'Transparent sealing with color-matched cement putty, followed by quarterly inspections under our 3-Year / 5-Year Nexora Anti-Termite Warranty.'
+        description: "Transparent sealing with color-matched cement putty, followed by quarterly inspections under our 3-Year / 5-Year Sangle's Anti-Termite Warranty."
       }
     ]
   },

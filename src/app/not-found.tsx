@@ -44,11 +44,11 @@ export default function NotFound() {
             </Link>
 
             <a
-              href="tel:8368334476"
+              href="tel:8286007801"
               className="w-full sm:w-auto bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-sm py-3.5 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
             >
               <Phone className="w-4 h-4 fill-current animate-pulse" />
-              <span>Call 8368334476</span>
+              <span>Call 8286007801</span>
             </a>
           </div>
         </div>

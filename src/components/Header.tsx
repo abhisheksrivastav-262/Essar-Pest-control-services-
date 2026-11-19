@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ChevronDown, Menu, X, Phone, CalendarCheck } from 'lucide-react';
+import { ChevronDown, Menu, X, CalendarCheck } from 'lucide-react';
 import { Logo } from './Logo';
 import { QuoteModal } from './QuoteModal';
 
@@ -140,14 +140,6 @@ export const Header: React.FC = () => {
 
           {/* Right Action CTA (Desktop) */}
           <div className="hidden lg:flex items-center space-x-3">
-            <a
-              href="tel:8368334476"
-              className="flex items-center gap-2 text-slate-700 hover:text-brand-green-500 font-bold text-sm px-3 py-2 rounded-xl transition-colors"
-            >
-              <Phone className="w-4 h-4 text-brand-green-500" />
-              <span>8368334476</span>
-            </a>
-
             <button
               onClick={() => setIsQuoteModalOpen(true)}
               className="bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-sm px-5 py-2.5 rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2"
@@ -158,15 +150,7 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Mobile Hamburger Toggle */}
-          <div className="flex lg:hidden items-center space-x-2">
-            <a
-              href="tel:8368334476"
-              className="bg-brand-green-50 text-brand-green-500 p-2 rounded-xl"
-              aria-label="Call Gurgaon office"
-            >
-              <Phone className="w-5 h-5" />
-            </a>
-
+          <div className="flex lg:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-700 hover:text-brand-green-500 rounded-xl focus:outline-none"

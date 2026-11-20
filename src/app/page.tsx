@@ -20,17 +20,13 @@ import { CTABanner } from '@/components/CTABanner';
 import { HeroVideo } from '@/components/HeroVideo';
 import { pestsData } from '@/data/pests';
 
-const essarGallery = [
-  ['WhatsApp Image 2026-11-20 at 13.06.57.jpeg', 'Essar branded pest control mascot'],
-  ['WhatsApp Image 2026-11-20 at 13.09.04.jpeg', 'Essar pest control technician in protective clothing'],
-  ['WhatsApp Image 2026-11-20 at 13.10.14 (1).jpeg', 'Essar pest control campaign artwork'],
-  ['WhatsApp Image 2026-11-20 at 13.10.14 (2).jpeg', 'Cockroach pest control campaign'],
-  ['WhatsApp Image 2026-11-20 at 13.10.14.jpeg', 'Technician applying pest treatment'],
-  ['WhatsApp Image 2026-11-20 at 13.10.15 (1).jpeg', 'Essar pest control services and features'],
-  ['WhatsApp Image 2026-11-20 at 13.10.15 (2).jpeg', 'Essar Pest Control hiring campaign'],
-  ['WhatsApp Image 2026-11-20 at 13.10.15.jpeg', 'Essar pest protection campaign'],
-  ['WhatsApp Image 2026-11-20 at 13.10.16 (1).jpeg', 'Pest control solution campaign'],
-  ['WhatsApp Image 2026-11-20 at 13.10.16.jpeg', 'Spider pest control campaign'],
+const serviceImages = [
+  ['WhatsApp Image 2026-11-20 at 13.10.14 (2).jpeg', 'Cockroach control service'],
+  ['WhatsApp Image 2026-11-20 at 13.10.16 (1).jpeg', 'Rodent control service'],
+  ['WhatsApp Image 2026-11-20 at 13.10.14 (1).jpeg', 'Mosquito fogging service'],
+  ['/images/pests/Wasps & Honey Bees.png', 'Honey bee and wasp control'],
+  ['WhatsApp Image 2026-11-20 at 13.10.15 (1).jpeg', 'General pest management service'],
+  ['/images/pests/Subterranean Termites (Deemak).png', 'Termite treatment'],
 ];
 
 export default function HomePage() {
@@ -38,12 +34,12 @@ export default function HomePage() {
     ['termites', 'german-cockroach', 'bed-bugs', 'rodents'].includes(p.slug)
   );
   const featuredServices = [
-    { title: 'Gel Treatment', description: 'Targeted gel application for cockroaches and other crawling pests in kitchens, cabinets, and common hiding spots.', icon: Sparkles },
-    { title: 'Rodent Treatment', description: 'Inspection, baiting, entry point identification, and practical exclusion guidance for rats and mice.', icon: ShieldCheck },
-    { title: 'Mosquitoes Treatment', description: 'Treatment for mosquito resting and breeding areas, with guidance to reduce standing water around the property.', icon: RotateCcw },
-    { title: 'Honey Bees Pest Control', description: 'Assessment and safe, situation-specific management of bee activity around homes and workplaces.', icon: Award },
-    { title: 'General Pest Management Process', description: 'A planned inspection, suitable treatment, and follow-up approach for common household and commercial pests.', icon: Check },
-    { title: 'Termite Treatment', description: 'Termite inspection and treatment recommendations for affected woodwork, walls, and building foundations.', icon: Bug },
+    { title: 'Gel Treatment', description: 'Targeted gel application for cockroaches and other crawling pests in kitchens, cabinets, and common hiding spots.', icon: Sparkles, image: serviceImages[0] },
+    { title: 'Rodent Treatment', description: 'Inspection, baiting, entry point identification, and practical exclusion guidance for rats and mice.', icon: ShieldCheck, image: serviceImages[1] },
+    { title: 'Mosquitoes Treatment', description: 'Treatment for mosquito resting and breeding areas, with guidance to reduce standing water around the property.', icon: RotateCcw, image: serviceImages[2] },
+    { title: 'Honey Bees Pest Control', description: 'Assessment and safe, situation-specific management of bee activity around homes and workplaces.', icon: Award, image: serviceImages[3] },
+    { title: 'General Pest Management Process', description: 'A planned inspection, suitable treatment, and follow-up approach for common household and commercial pests.', icon: Check, image: serviceImages[4] },
+    { title: 'Termite Treatment', description: 'Termite inspection and treatment recommendations for affected woodwork, walls, and building foundations.', icon: Bug, image: serviceImages[5] },
   ];
 
   return (
@@ -196,8 +192,8 @@ export default function HomePage() {
           {/* Supporting Photo Column */}
           <div className="lg:col-span-4 h-full min-h-[380px] relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
             <Image
-              src="/images/essar/WhatsApp%20Image%202026-11-20%20at%2013.06.57.jpeg"
-              alt="Essar pest control branded mascot"
+              src="/images/essar/WhatsApp%20Image%202026-11-20%20at%2013.10.15%20(2).jpeg"
+              alt="Essar Pest Control team hiring poster"
               fill
               className="object-contain bg-white"
             />
@@ -272,8 +268,8 @@ export default function HomePage() {
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[380px]">
                 <Image
-                  src="/images/essar/WhatsApp%20Image%202026-11-20%20at%2013.10.14.jpeg"
-                  alt="Technician applying pest treatment"
+                  src="/images/essar/WhatsApp%20Image%202026-11-20%20at%2013.09.04.jpeg"
+                  alt="Essar pest control technician wearing protective equipment"
                   fill
                   className="object-contain bg-white"
                 />
@@ -291,14 +287,27 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-extrabold text-brand-slate tracking-tight">Pest Control Services for Your Property</h2>
             <p className="text-slate-600 text-sm md:text-base">Choose a service to request an inspection and tailored treatment plan for your home, society, or business.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featuredServices.map(({ title, description, icon: Icon }) => (
-              <article key={title} className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm">
-                <div className="w-11 h-11 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredServices.map(({ title, description, icon: Icon, image: [image, imageAlt] }) => (
+              <article key={title} className="overflow-hidden bg-white rounded-2xl border border-slate-200 shadow-card">
+                <div className="relative aspect-[4/3] bg-slate-100">
+                  <Image
+                    src={image.startsWith('/') ? image : `/images/essar/${encodeURIComponent(image)}`}
+                    alt={imageAlt}
+                    fill
+                    sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-brand-slate">{title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed mt-2">{description}</p>
+                <div className="p-5">
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-9 h-9 rounded-lg bg-brand-green-50 text-brand-green-600 flex items-center justify-center shrink-0">
+                      <Icon className="w-4 h-4" />
+                    </span>
+                    <h3 className="text-base font-bold text-brand-slate">{title}</h3>
+                  </div>
+                  <p className="text-sm text-slate-600 leading-relaxed mt-3">{description}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -333,22 +342,6 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {commonPests.map((pest) => (
             <PestCard key={pest.slug} pest={pest} />
-          ))}
-        </div>
-      </section>
-
-      {/* ESSAR CAMPAIGN GALLERY */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">Essar Pest Control</div>
-          <h2 className="text-3xl font-extrabold text-brand-slate tracking-tight">Our Services & Campaigns</h2>
-          <p className="text-slate-600 text-sm">Explore our pest control services, treatment work, and campaign highlights.</p>
-        </div>
-        <div className="grid grid-cols-1 gap-8">
-          {essarGallery.map(([file, alt]) => (
-            <div key={file} className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
-              <Image src={`/images/essar/${encodeURIComponent(file)}`} alt={alt} width={1200} height={900} sizes="(max-width: 896px) 100vw, 896px" className="block w-full h-auto object-contain" />
-            </div>
           ))}
         </div>
       </section>

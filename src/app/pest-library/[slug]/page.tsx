@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: PestPageProps) {
   if (!pest) return { title: 'Pest Not Found' };
 
   return {
-    title: `${pest.name} Control | Sangle's Pest Control & Service`,
-    description: `Professional ${pest.name} eradication. ${pest.tagline}. Safe, odorless, and government-approved treatment with written warranty. Call 8286007801.`,
+    title: `${pest.name} Control | Essar Pest Control Services`,
+    description: `Professional ${pest.name} eradication. ${pest.tagline}. Safe, odorless, and government-approved treatment with written warranty. Call 8898172297.`,
   };
 }
 
@@ -46,7 +46,7 @@ export default function SinglePestPage({ params }: PestPageProps) {
   return (
     <div className="space-y-16 pb-12">
       <PageHero
-        title={`Live ${pest.name}-Free with Sangle's`}
+        title={`Live ${pest.name}-Free with Essar Pest Control`}
         subtitle={pest.tagline}
         breadcrumbs={[
           { label: 'Home', href: '/' },
@@ -65,7 +65,7 @@ export default function SinglePestPage({ params }: PestPageProps) {
               <div className="relative h-72 w-full rounded-2xl overflow-hidden bg-slate-100">
                 <Image
                   src={pest.imageUrl}
-                  alt={`Sangle's Pest Control - ${pest.name} Control`}
+                  alt={`Essar Pest Control Services - ${pest.name} Control`}
                   fill
                   className="object-cover"
                 />

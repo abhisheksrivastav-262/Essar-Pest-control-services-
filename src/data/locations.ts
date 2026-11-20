@@ -11,12 +11,12 @@ export interface LocationArea {
 
 export const locationsData: LocationArea[] = [
   {
-    id: 'jogeshwari-east-hq',
-    name: 'Jogeshwari East & Majasgaon (Office HQ)',
+    id: 'malad-west-hq',
+    name: 'Malad West & Malvani (Office HQ)',
     isHeadquarters: true,
     type: 'Operational Central Hub',
-    description: 'Our central operational office at Office No 2 Laxuman Parb chawl, opp. Bandivali School, Majasgaon, Jogeshwari East 400060. Providing rapid 30-minute emergency dispatch for Commercial, Industrial, Home, Society, and Warehouse properties.',
-    servicedNeighborhoods: ['Majasgaon', 'Bandivali', 'Jogeshwari East', 'Jogeshwari West', 'JVLR Link Road', 'Ismail Yusuf College Area', 'Shyam Nagar'],
+    description: 'Our central operational office at Gate no-7, N C C, Shop No 17, Plot No- 8, Malvani Rd, Malvani, Malad West, Mumbai, Maharashtra 400095. Providing rapid 30-minute emergency dispatch for Gel Treatment, Rodent, Mosquito, Honey Bees, General Pest Management & Termite Treatment.',
+    servicedNeighborhoods: ['Malvani', 'Malad West', 'Malad East', 'Mindspace', 'Chincholi Bunder', 'Marve Road', 'Orlem'],
     responseDelay: '30-45 mins (Immediate dispatch)',
     imageUrl: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80',
   },

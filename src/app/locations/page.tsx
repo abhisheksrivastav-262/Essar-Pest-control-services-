@@ -7,16 +7,16 @@ import { locationsData } from '@/data/locations';
 import { MapPin, Phone, ExternalLink, Clock, MessageSquare } from 'lucide-react';
 
 export const metadata = {
-  title: "Pest Control Service Locations | Sangle's Pest Control & Service",
+  title: "Pest Control Service Locations | Essar Pest Control Services",
   description:
-    "Sangle's Pest Control & Service central office in Majasgaon, Jogeshwari East 400060. Servicing Commercial, Industrial, Home, Society, and Warehouse properties. Call 8286007801.",
+    "Essar Pest Control Services central office in Malad West, Mumbai, Maharashtra 400095. Servicing Commercial, Industrial, Home, Society, and Warehouse properties. Call 8898172297.",
 };
 
 export default function LocationsPage() {
   return (
     <div className="space-y-16 pb-12">
       <PageHero
-        title="Jogeshwari East Office & Coverage Network"
+        title="Malad West Office & Coverage Network"
         subtitle="Rapid 30-minute to 2-hour technician dispatch for Commercial, Industrial, Home, Society, and Warehouse locations."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Locations' }]}
         badge="Office HQ & Service Network"
@@ -32,7 +32,7 @@ export default function LocationsPage() {
               <MapPin className="w-4 h-4" /> Operational Central Hub
             </div>
             <h2 className="text-2xl md:text-3xl font-extrabold text-brand-slate">
-              Office No 2 Laxuman Parb chawl, Majasgaon, Jogeshwari East
+              Gate no-7, N C C, Shop No 17, Plot No- 8, Malvani Rd, Malvani, Malad West, Mumbai, Maharashtra 400095
             </h2>
 
             {/* HQ Supporting Photo + Details */}
@@ -40,18 +40,18 @@ export default function LocationsPage() {
               <div className="sm:col-span-5 h-44 rounded-2xl overflow-hidden relative shadow-md border-2 border-white">
                 <Image
                   src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
-                  alt="Sangle's Pest Control Central Dispatch Team"
+                  alt="Essar Pest Control Pest Control Central Dispatch Team"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-2.5">
-                  <span className="text-[10px] font-bold text-white">Jogeshwari East HQ</span>
+                  <span className="text-[10px] font-bold text-white">Malad West HQ</span>
                 </div>
               </div>
 
               <div className="sm:col-span-7 space-y-2">
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Our central office is located at Office No 2 Laxuman Parb chawl, opposite Bandivali School, Majasgaon, Jogeshwari East 400060. We provide reliable pest control services for Commercial, Industrial, Home, Society, and Warehouse requirements.
+                  Our central office is located at Gate no-7, N C C, Shop No 17, Plot No- 8, Malvani Rd, Malvani, Malad West, Mumbai, Maharashtra 400095. We provide reliable pest control services for Commercial, Industrial, Home, Society, and Warehouse requirements.
                 </p>
                 <div className="space-y-1 text-xs font-semibold text-slate-700">
                   <div className="flex items-center gap-2">
@@ -60,11 +60,11 @@ export default function LocationsPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4 text-brand-amber-500" />
-                    <span>Contact No: 8286007801</span>
+                    <span>Contact No: 8898172297</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MessageSquare className="w-4 h-4 text-[#25D366]" />
-                    <span>WhatsApp: 8286007801</span>
+                    <span>WhatsApp: 8898172297</span>
                   </div>
                 </div>
               </div>
@@ -72,7 +72,7 @@ export default function LocationsPage() {
 
             <div className="pt-2 flex flex-wrap gap-3">
               <a
-                href="https://maps.google.com/?q=Bandivali+School+Majasgaon+Jogeshwari+East+400060"
+                href="https://maps.google.com/?q=Gate+No+7+NCC+Shop+No+17+Plot+No+8+Malvani+Rd+Malvani+Malad+West+Mumbai+Maharashtra+400095"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white font-bold text-xs py-3 px-5 rounded-xl transition-all shadow-md"
@@ -82,11 +82,11 @@ export default function LocationsPage() {
               </a>
 
               <a
-                href="tel:8286007801"
+                href="tel:8898172297"
                 className="inline-flex items-center gap-2 bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-bold text-xs py-3 px-5 rounded-xl transition-all shadow-md"
               >
                 <Phone className="w-3.5 h-3.5 fill-current" />
-                <span>Call 8286007801</span>
+                <span>Call 8898172297</span>
               </a>
             </div>
           </div>
@@ -94,8 +94,8 @@ export default function LocationsPage() {
           {/* Map Frame */}
           <div className="lg:col-span-5 h-80 rounded-2xl overflow-hidden border border-slate-300 relative shadow-inner bg-slate-100 flex items-center justify-center">
             <iframe
-              title="Sangle's Pest Control & Service Office Map"
-              src="https://maps.google.com/maps?q=Bandivali+School,+Majasgaon,+Jogeshwari+East,+Mumbai+400060&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              title="Essar Pest Control Services Office Map"
+              src="https://maps.google.com/maps?q=Gate+No+7+NCC+Shop+No+17+Plot+No+8+Malvani+Rd+Malvani+Malad+West+Mumbai+Maharashtra+400095&t=&z=15&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -177,7 +177,7 @@ export default function LocationsPage() {
                   </span>
 
                   <a
-                    href="tel:8286007801"
+                    href="tel:8898172297"
                     className="text-xs font-extrabold text-brand-green-500 hover:text-brand-amber-500 transition-colors flex items-center gap-1"
                   >
                     <span>Request Service</span>

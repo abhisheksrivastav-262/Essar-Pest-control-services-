@@ -29,7 +29,7 @@ export default function PestLibraryPage() {
     <div className="space-y-12 pb-12">
       <PageHero
         title="Pest Identification & Solutions Library"
-        subtitle="Learn how to identify common Indian pests, recognize signs of infestation, and understand Sangle's Pest Control & Service solutions."
+        subtitle="Learn how to identify common Indian pests, recognize signs of infestation, and understand Essar Pest Control Services solutions."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Pest Library' }]}
         badge="Complete Identification Guide"
         videoUrl="https://assets.mixkit.co/videos/preview/mixkit-close-up-shot-of-ants-on-wood-43093-large.mp4"
@@ -96,7 +96,7 @@ export default function PestLibraryPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <CTABanner
           title="Not sure what pest is invading your home?"
-          subtitle="Our specialists offer free photo identification via WhatsApp or on-site inspection. Call 8286007801 today."
+          subtitle="Our specialists offer free photo identification via WhatsApp or on-site inspection. Call 8898172297 today."
           badge="Free Pest Identification"
         />
       </section>

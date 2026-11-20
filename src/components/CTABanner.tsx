@@ -19,8 +19,8 @@ export const CTABanner: React.FC<CTABannerProps> = ({
   bgImageUrl = 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?auto=format&fit=crop&w=1200&q=80',
 }) => {
   const openWhatsApp = () => {
-    const formattedMessage = `🛡️ New Website Lead - Sangle's Pest Control & Service\n\nI want to claim the Special Offer: 30% Off Total Pest Shield.\nPhone Helpline: 8286007801\n\nSource:\nWebsite Offer Banner`;
-    window.open(`https://wa.me/918286007801?text=${encodeURIComponent(formattedMessage)}`, '_blank');
+    const formattedMessage = `🛡️ New Website Lead - Essar Pest Control Services\n\nI want to claim the Special Offer: 30% Off Total Pest Shield.\nPhone Helpline: 8898172297\n\nSource:\nWebsite Offer Banner`;
+    window.open(`https://wa.me/918898172297?text=${encodeURIComponent(formattedMessage)}`, '_blank');
   };
 
   return (
@@ -29,7 +29,7 @@ export const CTABanner: React.FC<CTABannerProps> = ({
       <div className="absolute inset-0 z-0">
         <Image
           src={bgImageUrl}
-          alt="Sangle's Pest Control & Service"
+          alt="Essar Pest Control Services"
           fill
           className="object-cover object-center"
         />
@@ -55,11 +55,11 @@ export const CTABanner: React.FC<CTABannerProps> = ({
 
         <div className="flex flex-col sm:flex-row items-center gap-3 flex-shrink-0 w-full lg:w-auto">
           <a
-            href="tel:8286007801"
+            href="tel:8898172297"
             className="w-full sm:w-auto bg-white hover:bg-slate-100 text-brand-slate font-black text-sm py-3.5 px-5 rounded-2xl transition-all shadow-md flex items-center justify-center gap-2"
           >
             <Phone className="w-4 h-4 text-brand-green-500 fill-current animate-pulse" />
-            <span>Call 8286007801</span>
+            <span>Call 8898172297</span>
           </a>
 
           <button

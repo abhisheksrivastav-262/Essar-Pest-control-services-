@@ -8,7 +8,7 @@ export const HeroAnimatedBg: React.FC = () => {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
       {/* Pest Control Grid Pattern Overlay */}
-      <div className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#1F6B3A30_1px,transparent_1px),linear-gradient(to_bottom,#1F6B3A30_1px,transparent_1px)] [background-size:32px_32px]" />
+      <div className="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#087F6E30_1px,transparent_1px),linear-gradient(to_bottom,#087F6E30_1px,transparent_1px)] [background-size:32px_32px]" />
 
       {/* Radial Scanning Glow Beam */}
       <motion.div

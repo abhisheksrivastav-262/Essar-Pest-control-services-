@@ -6,17 +6,17 @@ import { CTABanner } from '@/components/CTABanner';
 import { Phone, Mail, MapPin, Clock, ExternalLink, ShieldCheck, MessageSquare } from 'lucide-react';
 
 export const metadata = {
-  title: "Contact Sangle's Pest Control & Service | Call 8286007801",
+  title: "Contact Essar Pest Control Pest Control & Service | Call 8898172297",
   description:
-    "Contact Sangle's Pest Control & Service at Office No 2 Laxuman Parb chawl, opp. Bandivali School, Majasgaon, Jogeshwari East 400060. Call or WhatsApp 8286007801. Free site inspections for Commercial, Industrial, Home, Society & Warehouse.",
+    "Contact Essar Pest Control Pest Control & Service at Gate no-7, N C C, Shop No 17, Plot No- 8, Malvani Rd, Malvani, Malad West, Mumbai, Maharashtra 400095. Call or WhatsApp 8898172297. Free site inspections for Commercial, Industrial, Home, Society & Warehouse.",
 };
 
 export default function ContactUsPage() {
   return (
     <div className="space-y-16 pb-12">
       <PageHero
-        title="Contact Sangle's Pest Control & Service"
-        subtitle="Speak with our team, request a free site inspection, or visit our office at Jogeshwari East."
+        title="Contact Essar Pest Control Pest Control & Service"
+        subtitle="Speak with our team, request a free site inspection, or visit our office at Malad West, Mumbai."
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]}
         badge="24/7 Helpline & Support"
         videoUrl="https://assets.mixkit.co/videos/preview/mixkit-car-driving-down-a-city-street-42513-large.mp4"
@@ -44,14 +44,14 @@ export default function ContactUsPage() {
             <div className="relative h-48 w-full rounded-2xl overflow-hidden shadow-md border-2 border-white">
               <Image
                 src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
-                alt="Sangle's Pest Control & Service Team"
+                alt="Essar Pest Control Pest Control & Service Team"
                 fill
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/90 via-transparent to-transparent flex items-end p-4">
                 <div>
-                  <div className="font-extrabold text-white text-sm">Jogeshwari East Operational Facility</div>
-                  <div className="text-[11px] text-slate-300">Office No 2 Laxuman Parb chawl, opp. Bandivali School, Majasgaon, Jogeshwari East 400060</div>
+                  <div className="font-extrabold text-white text-sm">Malad West Operational Facility</div>
+                  <div className="text-[11px] text-slate-300">Gate no-7, N C C, Shop No 17, Plot No- 8, Malvani Rd, Malvani, Malad West, Mumbai, Maharashtra 400095</div>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function ContactUsPage() {
             <div className="space-y-4">
               {/* Phone Card */}
               <a
-                href="tel:8286007801"
+                href="tel:8898172297"
                 className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-brand-green-500 transition-all flex items-center gap-4 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-green-500 text-white flex items-center justify-center font-bold flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -71,7 +71,7 @@ export default function ContactUsPage() {
                     24/7 Click-to-Call Contact No
                   </div>
                   <div className="text-xl font-extrabold text-brand-slate group-hover:text-brand-green-600 transition-colors">
-                    8286007801
+                    8898172297
                   </div>
                   <div className="text-xs text-brand-amber-500 font-semibold">
                     Instant callback within 15 minutes
@@ -81,7 +81,7 @@ export default function ContactUsPage() {
 
               {/* WhatsApp Card */}
               <a
-                href="https://wa.me/918286007801"
+                href="https://wa.me/918898172297"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-[#25D366] transition-all flex items-center gap-4 group"
@@ -94,7 +94,7 @@ export default function ContactUsPage() {
                     WhatsApp Support No
                   </div>
                   <div className="text-xl font-extrabold text-[#25D366] transition-colors">
-                    8286007801
+                    8898172297
                   </div>
                   <div className="text-xs text-slate-500 font-semibold">
                     Chat with us directly on WhatsApp
@@ -112,13 +112,13 @@ export default function ContactUsPage() {
                     Office Address
                   </div>
                   <div className="text-sm font-bold text-brand-slate leading-snug">
-                    Office No 2 Laxuman Parb chawl, opposite Bandivali School, Majasgaon, Jogeshwari East 400060
+                    Gate no-7, N C C, Shop No 17, Plot No- 8, Malvani Rd, Malvani, Malad West, Mumbai, Maharashtra 400095
                   </div>
                   <div className="text-xs font-semibold text-slate-500">
                     Services: Commercial / Industrial / Home / Society / Warehouse
                   </div>
                   <a
-                    href="https://maps.google.com/?q=Bandivali+School+Majasgaon+Jogeshwari+East+400060"
+                    href="https://maps.google.com/?q=Gate+No+7+NCC+Shop+No+17+Plot+No+8+Malvani+Rd+Malvani+Malad+West+Mumbai+Maharashtra+400095"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-xs font-bold text-brand-green-500 hover:underline pt-1"
@@ -146,8 +146,8 @@ export default function ContactUsPage() {
             <div className="bg-white p-2 rounded-3xl border border-slate-200 shadow-md">
               <div className="h-64 rounded-2xl overflow-hidden relative">
                 <iframe
-                  title="Sangle's Pest Control & Service Location"
-                  src="https://maps.google.com/maps?q=Bandivali+School,+Majasgaon,+Jogeshwari+East,+Mumbai+400060&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  title="Essar Pest Control Pest Control & Service Location"
+                  src="https://maps.google.com/maps?q=Gate+No+7+NCC+Shop+No+17+Plot+No+8+Malvani+Rd+Malvani+Malad+West+Mumbai+Maharashtra+400095&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

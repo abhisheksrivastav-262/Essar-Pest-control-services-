@@ -15,7 +15,7 @@ interface PageHeroProps {
 export const PageHero: React.FC<PageHeroProps> = ({
   title,
   subtitle,
-  badge = "Sangle's Pest Control & Service",
+  badge = "Essar Pest Control Services",
   breadcrumbs = [{ label: 'Home', href: '/' }],
   videoUrl,
   posterUrl = 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80',

@@ -11,6 +11,7 @@ import {
   Sparkles,
   ArrowRight,
   Check,
+  Bug,
 } from 'lucide-react';
 import { QuoteForm } from '@/components/QuoteForm';
 import { PestCard } from '@/components/PestCard';
@@ -19,10 +20,31 @@ import { CTABanner } from '@/components/CTABanner';
 import { HeroVideo } from '@/components/HeroVideo';
 import { pestsData } from '@/data/pests';
 
+const essarGallery = [
+  ['WhatsApp Image 2026-11-20 at 13.06.57.jpeg', 'Essar branded pest control mascot'],
+  ['WhatsApp Image 2026-11-20 at 13.09.04.jpeg', 'Essar pest control technician in protective clothing'],
+  ['WhatsApp Image 2026-11-20 at 13.10.14 (1).jpeg', 'Essar pest control campaign artwork'],
+  ['WhatsApp Image 2026-11-20 at 13.10.14 (2).jpeg', 'Cockroach pest control campaign'],
+  ['WhatsApp Image 2026-11-20 at 13.10.14.jpeg', 'Technician applying pest treatment'],
+  ['WhatsApp Image 2026-11-20 at 13.10.15 (1).jpeg', 'Essar pest control services and features'],
+  ['WhatsApp Image 2026-11-20 at 13.10.15 (2).jpeg', 'Essar Pest Control hiring campaign'],
+  ['WhatsApp Image 2026-11-20 at 13.10.15.jpeg', 'Essar pest protection campaign'],
+  ['WhatsApp Image 2026-11-20 at 13.10.16 (1).jpeg', 'Pest control solution campaign'],
+  ['WhatsApp Image 2026-11-20 at 13.10.16.jpeg', 'Spider pest control campaign'],
+];
+
 export default function HomePage() {
   const commonPests = pestsData.filter((p) =>
     ['termites', 'german-cockroach', 'bed-bugs', 'rodents'].includes(p.slug)
   );
+  const featuredServices = [
+    { title: 'Gel Treatment', description: 'Targeted gel application for cockroaches and other crawling pests in kitchens, cabinets, and common hiding spots.', icon: Sparkles },
+    { title: 'Rodent Treatment', description: 'Inspection, baiting, entry point identification, and practical exclusion guidance for rats and mice.', icon: ShieldCheck },
+    { title: 'Mosquitoes Treatment', description: 'Treatment for mosquito resting and breeding areas, with guidance to reduce standing water around the property.', icon: RotateCcw },
+    { title: 'Honey Bees Pest Control', description: 'Assessment and safe, situation-specific management of bee activity around homes and workplaces.', icon: Award },
+    { title: 'General Pest Management Process', description: 'A planned inspection, suitable treatment, and follow-up approach for common household and commercial pests.', icon: Check },
+    { title: 'Termite Treatment', description: 'Termite inspection and treatment recommendations for affected woodwork, walls, and building foundations.', icon: Bug },
+  ];
 
   return (
     <div className="space-y-16 md:space-y-24 pb-12">
@@ -42,7 +64,7 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight drop-shadow-md">
-                Live <span className="text-brand-amber-400">Pest-Free</span> with Sangle&apos;s Pest Control & Service
+                Live <span className="text-brand-amber-400">Pest-Free</span> with Essar Pest Control & Service
               </h1>
 
               <p className="text-base md:text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed drop-shadow">
@@ -52,11 +74,11 @@ export default function HomePage() {
               {/* Call to Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                 <a
-                  href="tel:8286007801"
+                  href="tel:8898172297"
                   className="w-full sm:w-auto bg-brand-green-500 hover:bg-brand-green-600 text-white font-extrabold text-base py-4 px-8 rounded-2xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-3 group"
                 >
                   <Phone className="w-5 h-5 fill-current animate-pulse" />
-                  <span>Call 8286007801 (24/7)</span>
+                  <span>Call 8898172297 (24/7)</span>
                 </a>
 
                 <Link
@@ -97,10 +119,10 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
           <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest bg-brand-green-50 px-3 py-1 rounded-full inline-block">
-            The Sangle&apos;s Difference
+            The Essar Difference
           </div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-brand-slate tracking-tight">
-            Why Clients Trust Sangle&apos;s Pest Control & Service
+            Why Clients Trust Essar Pest Control & Service
           </h2>
           <p className="text-slate-600 text-sm md:text-base">
             We deliver professional corporate standards, government-approved odorless chemicals, and verified local technicians for every commercial, industrial, home, society, and warehouse property.
@@ -116,7 +138,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-lg font-bold text-brand-slate">24/7 Emergency Service</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Pest emergencies don&apos;t wait for office hours. Call 8286007801 anytime for rapid same-day technician dispatch.
+                Pest emergencies don&apos;t wait for office hours. Call 8898172297 anytime for rapid same-day technician dispatch.
               </p>
             </div>
 
@@ -174,17 +196,11 @@ export default function HomePage() {
           {/* Supporting Photo Column */}
           <div className="lg:col-span-4 h-full min-h-[380px] relative rounded-3xl overflow-hidden shadow-xl border-4 border-white">
             <Image
-              src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=800&q=80"
-              alt="Certified Pest Technician in Protective Gear"
+              src="/images/essar/WhatsApp%20Image%202026-11-20%20at%2013.06.57.jpeg"
+              alt="Essar pest control branded mascot"
               fill
-              className="object-cover"
+              className="object-contain bg-white"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/90 via-transparent to-transparent flex items-end p-6">
-              <div className="text-white">
-                <div className="font-extrabold text-base">Verified Field Specialist</div>
-                <div className="text-xs text-slate-300">Equipped with approved odorless formulations</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -198,7 +214,7 @@ export default function HomePage() {
                 Seamless Service Experience
               </div>
               <h2 className="text-3xl font-extrabold text-brand-slate tracking-tight">
-                What to Expect When You Work with Sangle&apos;s Pest Control & Service
+                What to Expect When You Work with Essar Pest Control & Service
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed">
                 From your very first inquiry to complete pest elimination, we deliver a hassle-free 3-step service experience across Commercial, Industrial, Home, Society, and Warehouse sites.
@@ -256,24 +272,45 @@ export default function HomePage() {
             <div className="lg:col-span-6">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white h-[380px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
-                  alt="Technician Performing Sanitation Inspection"
+                  src="/images/essar/WhatsApp%20Image%202026-11-20%20at%2013.10.14.jpeg"
+                  alt="Technician applying pest treatment"
                   fill
-                  className="object-cover"
+                  className="object-contain bg-white"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-slate/80 via-transparent to-transparent flex items-end p-6">
-                  <div className="text-white">
-                    <div className="font-extrabold text-lg">Sangle&apos;s Certified Technicians</div>
-                    <div className="text-xs text-slate-200">Office No 2 Laxuman Parb chawl, opp. Bandivali School, Majasgaon, Jogeshwari East 400060</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. COMMON PEST PROBLEMS */}
+      {/* 4. SERVICES */}
+      <section className="bg-white border-y border-slate-100 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">Our Services</div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-slate tracking-tight">Pest Control Services for Your Property</h2>
+            <p className="text-slate-600 text-sm md:text-base">Choose a service to request an inspection and tailored treatment plan for your home, society, or business.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {featuredServices.map(({ title, description, icon: Icon }) => (
+              <article key={title} className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <div className="w-11 h-11 rounded-xl bg-brand-green-50 text-brand-green-600 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-brand-slate">{title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed mt-2">{description}</p>
+              </article>
+            ))}
+          </div>
+          <div className="text-center pt-2">
+            <Link href="/contact-us" className="inline-flex items-center gap-2 bg-brand-green-500 hover:bg-brand-green-600 text-white font-bold py-3 px-6 rounded-xl transition-colors">
+              Request a Service <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. COMMON PEST PROBLEMS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
@@ -296,6 +333,22 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {commonPests.map((pest) => (
             <PestCard key={pest.slug} pest={pest} />
+          ))}
+        </div>
+      </section>
+
+      {/* ESSAR CAMPAIGN GALLERY */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <div className="text-xs font-bold text-brand-green-500 uppercase tracking-widest">Essar Pest Control</div>
+          <h2 className="text-3xl font-extrabold text-brand-slate tracking-tight">Our Services & Campaigns</h2>
+          <p className="text-slate-600 text-sm">Explore our pest control services, treatment work, and campaign highlights.</p>
+        </div>
+        <div className="grid grid-cols-1 gap-8">
+          {essarGallery.map(([file, alt]) => (
+            <div key={file} className="w-full max-w-4xl mx-auto overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
+              <Image src={`/images/essar/${encodeURIComponent(file)}`} alt={alt} width={1200} height={900} sizes="(max-width: 896px) 100vw, 896px" className="block w-full h-auto object-contain" />
+            </div>
           ))}
         </div>
       </section>

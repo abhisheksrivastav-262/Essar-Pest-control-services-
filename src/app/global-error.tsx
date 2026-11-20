@@ -28,10 +28,10 @@ export default function GlobalError({
               Reload Application
             </button>
             <a
-              href="tel:8286007801"
+              href="tel:8898172297"
               className="block w-full bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-extrabold text-xs py-3 px-6 rounded-xl transition-all shadow-md"
             >
-              Call Helpline: 8286007801
+              Call Helpline: 8898172297
             </a>
           </div>
         </div>

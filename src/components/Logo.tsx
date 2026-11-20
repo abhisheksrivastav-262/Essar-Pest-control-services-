@@ -17,21 +17,21 @@ export const Logo: React.FC<LogoProps> = ({
   showText = true,
 }) => {
   const iconSizes = {
-    sm: 'h-9 w-auto',
-    md: 'h-10 sm:h-12 md:h-14 w-auto',
-    lg: 'h-12 sm:h-14 md:h-16 w-auto',
+    sm: 'h-11 w-auto',
+    md: 'h-12 sm:h-14 md:h-16 w-auto',
+    lg: 'h-16 sm:h-[4.5rem] md:h-20 w-auto',
   }[size];
 
   const titleSizes = {
-    sm: 'text-base sm:text-lg',
-    md: 'text-base sm:text-xl md:text-2xl',
+    sm: 'text-lg sm:text-xl',
+    md: 'text-lg sm:text-xl md:text-2xl',
     lg: 'text-xl sm:text-2xl md:text-3xl',
   }[size];
 
   const subSizes = {
-    sm: 'text-[9px] sm:text-[10px]',
-    md: 'text-[9px] sm:text-[11px] md:text-xs',
-    lg: 'text-[10px] sm:text-xs md:text-sm',
+    sm: 'text-[10px] sm:text-xs',
+    md: 'text-[10px] sm:text-xs md:text-sm',
+    lg: 'text-[11px] sm:text-xs md:text-sm',
   }[size];
 
   const isLight = variant === 'light';
@@ -40,7 +40,7 @@ export const Logo: React.FC<LogoProps> = ({
     <Link
       href="/"
       className={`inline-flex items-center gap-2 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-green-500 rounded-xl transition-all ${className}`}
-      aria-label="Sangle's Pest Control & Service - Home"
+      aria-label="Essar Pest Control Services - Home"
     >
       {/* Logo Emblem Icon */}
       <div
@@ -49,31 +49,31 @@ export const Logo: React.FC<LogoProps> = ({
         }`}
       >
         <Image
-          src="/images/logo-icon.png"
-          alt="Sangle's Pest Control & Service Logo"
-          width={130}
-          height={145}
+          src="/images/essar-logo.jpeg"
+          alt="Essar Pest Control Services rat mascot logo"
+          width={715}
+          height={715}
           priority
-          className={`${iconSizes} object-contain`}
+          className={`${iconSizes} rounded-lg object-contain`}
         />
       </div>
 
       {/* Business Name right next to the logo */}
       {showText && (
-        <div className="flex flex-col justify-center leading-none select-none">
+        <div className="flex flex-col flex-shrink-0 justify-center leading-none select-none">
           <span
-            className={`font-black tracking-tight leading-none ${titleSizes} ${
-              isLight ? 'text-white' : 'text-[#A31F25]'
+            className={`font-black tracking-tight leading-none whitespace-nowrap ${titleSizes} ${
+              isLight ? 'text-white' : 'text-brand-amber-500'
             }`}
           >
-            Sangle&apos;s
+            Essar
           </span>
           <span
-            className={`font-extrabold tracking-wider uppercase leading-none mt-1 ${subSizes} ${
-              isLight ? 'text-brand-green-400' : 'text-[#1F6B3A]'
+            className={`font-extrabold tracking-wider uppercase leading-none whitespace-nowrap mt-1 ${subSizes} ${
+              isLight ? 'text-brand-green-400' : 'text-brand-green-600'
             }`}
           >
-            Pest Control &amp; Service
+            Pest Control Services
           </span>
         </div>
       )}

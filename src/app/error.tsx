@@ -47,11 +47,11 @@ export default function Error({
           </Link>
 
           <a
-            href="tel:8286007801"
+            href="tel:8898172297"
             className="w-full sm:w-auto bg-brand-amber-500 hover:bg-brand-amber-600 text-white font-bold text-xs py-3 px-5 rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
           >
             <Phone className="w-4 h-4 fill-current" />
-            <span>Call 8286007801</span>
+            <span>Call 8898172297</span>
           </a>
         </div>
       </div>

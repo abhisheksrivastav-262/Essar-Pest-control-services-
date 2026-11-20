@@ -6,9 +6,9 @@ import { CTABanner } from '@/components/CTABanner';
 import { Check, ShieldCheck, HelpCircle, Phone } from 'lucide-react';
 
 export const metadata = {
-  title: "Home & Residential Pest Control | Sangle's Pest Control & Service",
+  title: "Home & Residential Pest Control | Essar Pest Control Services",
   description:
-    "Comprehensive home pest control packages starting at ₹999. Odorless cockroach gel, termite drill treatment, bed bug steam blast, and mosquito protection. Call 8286007801.",
+    "Comprehensive home pest control packages starting at ₹999. Odorless cockroach gel, termite drill treatment, bed bug steam blast, and mosquito protection. Call 8898172297.",
 };
 
 const PLAN_TIERS = [
@@ -64,7 +64,7 @@ const PLAN_TIERS = [
 const FAQS = [
   {
     q: 'Do we need to empty our kitchen cabinets before the technician arrives?',
-    a: "No! Unlike old-fashioned smelly sprays, Sangle's utilizes odorless herbal gel dots applied directly inside crack junctions. You do not need to empty dishes, utensils, or food packages.",
+    a: "No! Unlike old-fashioned smelly sprays, Essar Pest Control utilizes odorless herbal gel dots applied directly inside crack junctions. You do not need to empty dishes, utensils, or food packages.",
   },
   {
     q: 'Are the chemicals safe for my children, elderly parents, and pets?',
@@ -72,7 +72,7 @@ const FAQS = [
   },
   {
     q: 'What happens if I see cockroaches or ants again after treatment?',
-    a: "All Sangle's residential plans come with a written warranty. If pests reappear during your warranty period, simply call 8286007801 and our technician will conduct a free return re-treatment within 24 hours.",
+    a: "All Essar Pest Control residential plans come with a written warranty. If pests reappear during your warranty period, simply call 8898172297 and our technician will conduct a free return re-treatment within 24 hours.",
   },
   {
     q: 'How long does subterranean anti-termite treatment last?',
@@ -102,7 +102,7 @@ export default function ResidentialServicesPage() {
               Keep Your Family & Furniture 100% Protected
             </h2>
             <p className="text-slate-600 text-base leading-relaxed">
-              Living in residential apartments, housing societies, or independent homes exposes premises to termites, German cockroaches, bed bugs, and seasonal pests. Sangle&apos;s Pest Control & Service combines advanced inspection with eco-friendly treatments that eradicate pests at the source while preserving indoor air quality.
+              Living in residential apartments, housing societies, or independent homes exposes premises to termites, German cockroaches, bed bugs, and seasonal pests. Essar Pest Control & Service combines advanced inspection with eco-friendly treatments that eradicate pests at the source while preserving indoor air quality.
             </p>
 
             {/* Photo & Features Grid Layout */}
@@ -210,7 +210,7 @@ export default function ResidentialServicesPage() {
 
                   <div className="pt-4">
                     <a
-                      href="tel:8286007801"
+                      href="tel:8898172297"
                       className={`w-full py-3 px-4 rounded-xl font-extrabold text-sm flex items-center justify-center gap-2 transition-all shadow-md ${
                         tier.popular
                           ? 'bg-brand-amber-500 hover:bg-brand-amber-600 text-white'

@@ -22,7 +22,7 @@ export const PestCard: React.FC<PestCardProps> = ({ pest }) => {
       <div className="relative h-48 w-full bg-slate-100 overflow-hidden">
         <Image
           src={pest.imageUrl}
-          alt={`Sangle's Pest Control & Service - ${pest.name} Control`}
+          alt={`Essar Pest Control Services - ${pest.name} Control`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"

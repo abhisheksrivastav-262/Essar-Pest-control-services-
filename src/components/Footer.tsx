@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-5">
             <Logo layout="stacked" variant="light" size="lg" className="-ml-1" />
             <p className="text-xs leading-relaxed text-slate-400">
-              Sangle&apos;s Pest Control & Service delivers safe, odorless, and government-approved pest management solutions for Commercial, Industrial, Home, Society, and Warehouse properties.
+              Essar Pest Control Services delivers safe, odorless, and government-approved pest management solutions. Gel Treatment, Rodent, Mosquito, Honey Bees, General Pest Management &amp; Termite Treatment.
             </p>
 
             {/* Trust Badges */}
@@ -23,11 +23,11 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2 text-xs font-medium text-slate-300">
                 <Award className="w-4 h-4 text-brand-amber-400" />
-                <span>Certified & Experienced Specialists</span>
+                <span>Certified &amp; Experienced Specialists</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-medium text-slate-300">
                 <ShieldCheck className="w-4 h-4 text-brand-green-400" />
-                <span>Licensed & Eco-Friendly Treatments</span>
+                <span>Licensed &amp; Eco-Friendly Treatments</span>
               </div>
             </div>
           </div>
@@ -39,43 +39,43 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li>
-                <Link href="/commercial-services" className="hover:text-brand-green-400 transition-colors font-medium">
-                  🏢 Commercial Pest Control
-                </Link>
-              </li>
-              <li>
-                <Link href="/commercial-services" className="hover:text-brand-green-400 transition-colors font-medium">
-                  🏭 Industrial Pest Control
+                <Link href="/residential-services" className="hover:text-brand-green-400 transition-colors font-medium">
+                  🧪 Gel Treatment
                 </Link>
               </li>
               <li>
                 <Link href="/residential-services" className="hover:text-brand-green-400 transition-colors font-medium">
-                  🏠 Home & Residential Pest Control
+                  🐭 Rodent Treatment
                 </Link>
               </li>
               <li>
                 <Link href="/residential-services" className="hover:text-brand-green-400 transition-colors font-medium">
-                  🏘️ Society & Complex Pest Control
+                  🦟 Mosquito Treatment
+                </Link>
+              </li>
+              <li>
+                <Link href="/residential-services" className="hover:text-brand-green-400 transition-colors font-medium">
+                  🐝 Honey Bees Pest Control
                 </Link>
               </li>
               <li>
                 <Link href="/commercial-services" className="hover:text-brand-green-400 transition-colors font-medium">
-                  📦 Warehouse & Storage Pest Control
+                  🛡️ General Pest Management Process
                 </Link>
               </li>
               <li>
                 <Link href="/pest-library/termites" className="hover:text-brand-green-400 transition-colors">
-                  Anti-Termite (Deemak) Drill Barrier
+                  🏚️ Termite Treatment
+                </Link>
+              </li>
+              <li>
+                <Link href="/commercial-services" className="hover:text-brand-green-400 transition-colors">
+                  🏢 Commercial Pest Control
                 </Link>
               </li>
               <li>
                 <Link href="/pest-library/german-cockroach" className="hover:text-brand-green-400 transition-colors">
                   Herbal Kitchen Cockroach Gel Treatment
-                </Link>
-              </li>
-              <li>
-                <Link href="/pest-library/bed-bugs" className="hover:text-brand-green-400 transition-colors">
-                  Bed Bug Heat & Steam Eradication
                 </Link>
               </li>
             </ul>
@@ -84,38 +84,38 @@ export const Footer: React.FC = () => {
           {/* Column 3: Quick Navigation */}
           <div>
             <h4 className="text-white font-extrabold text-sm uppercase tracking-wider mb-4 border-l-4 border-brand-amber-500 pl-2">
-              Quick Links & Resources
+              Quick Links &amp; Resources
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li>
                 <Link href="/about" className="hover:text-brand-amber-400 transition-colors">
-                  About Sangle&apos;s Pest Control & Service
+                  About Essar Pest Control Services
                 </Link>
               </li>
               <li>
                 <Link href="/pest-library" className="hover:text-brand-amber-400 transition-colors">
-                  Pest Library & Identification Guide
+                  Pest Library &amp; Identification Guide
                 </Link>
               </li>
               <li>
                 <Link href="/locations" className="hover:text-brand-amber-400 transition-colors">
-                  Service Areas & Local Coverage
+                  Service Areas &amp; Local Coverage
                 </Link>
               </li>
               <li>
                 <Link href="/contact-us" className="hover:text-brand-amber-400 transition-colors">
-                  Contact Us & Location Map
+                  Contact Us &amp; Location Map
                 </Link>
               </li>
               <li>
                 <a
-                  href="https://wa.me/918286007801"
+                  href="https://wa.me/918898172297"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#25D366] transition-colors flex items-center gap-1.5"
                 >
                   <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
-                  <span>Chat on WhatsApp (8286007801)</span>
+                  <span>Chat on WhatsApp (8898172297)</span>
                 </a>
               </li>
             </ul>
@@ -129,7 +129,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-3.5 text-xs text-slate-300">
               {/* Contact No */}
               <a
-                href="tel:8286007801"
+                href="tel:8898172297"
                 className="flex items-center gap-3 group hover:text-white transition-colors"
               >
                 <div className="p-2 bg-brand-green-500/20 text-brand-green-400 rounded-lg group-hover:bg-brand-green-500 group-hover:text-white transition-colors">
@@ -137,13 +137,13 @@ export const Footer: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[10px] uppercase text-slate-400 font-semibold">Contact No (24/7)</div>
-                  <div className="font-bold text-sm text-brand-amber-400">8286007801</div>
+                  <div className="font-bold text-sm text-brand-amber-400">8898172297</div>
                 </div>
               </a>
 
               {/* WhatsApp No */}
               <a
-                href="https://wa.me/918286007801"
+                href="https://wa.me/918898172297"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 group hover:text-white transition-colors"
@@ -153,7 +153,7 @@ export const Footer: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[10px] uppercase text-slate-400 font-semibold">WhatsApp No</div>
-                  <div className="font-bold text-sm text-[#25D366]">8286007801</div>
+                  <div className="font-bold text-sm text-[#25D366]">8898172297</div>
                 </div>
               </a>
 
@@ -165,10 +165,10 @@ export const Footer: React.FC = () => {
                 <div>
                   <div className="text-[10px] uppercase text-slate-400 font-semibold">Office Address</div>
                   <div className="leading-snug">
-                    Office No 2 Laxuman Parb chawl, opposite Bandivali School, Majasgaon, Jogeshwari East 400060
+                    Gate no-7, N C C, Shop No 17, Plot No- 8, Malvani Rd, Malvani, Malad West, Mumbai, Maharashtra 400095
                   </div>
                   <a
-                    href="https://maps.google.com/?q=Bandivali+School+Majasgaon+Jogeshwari+East+400060"
+                    href="https://maps.google.com/?q=Gate+No+7+NCC+Shop+No+17+Plot+No+8+Malvani+Rd+Malvani+Malad+West+Mumbai+Maharashtra+400095"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[11px] font-bold text-brand-amber-400 hover:underline mt-1"
@@ -185,13 +185,13 @@ export const Footer: React.FC = () => {
         {/* Bottom Legal & Copyright Line */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            ©️ 2026 Sangle&apos;s Pest Control & Service. All Rights Reserved.
+            ©️ 2026 Essar Pest Control Services. All Rights Reserved.
           </div>
           <div className="flex items-center space-x-6">
-            <span className="text-slate-400 font-medium">Jogeshwari East 400060</span>
+            <span className="text-slate-400 font-medium">Malad West, Mumbai, Maharashtra 400095</span>
             <span>|</span>
             <Link href="/contact-us" className="hover:text-slate-300 transition-colors">
-              Privacy Policy & Terms
+              Privacy Policy &amp; Terms
             </Link>
           </div>
         </div>

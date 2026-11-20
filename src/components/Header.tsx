@@ -205,7 +205,7 @@ export const Header: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="block font-bold text-slate-800 py-2 border-b border-slate-100"
             >
-              Locations (Gurgaon & NCR)
+              Locations (Mumbai)
             </Link>
 
             <Link
